@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -212,9 +212,12 @@
             <option>Plumbing</option><option>HVAC</option><option>Insulation</option><option>Electrical</option><option>Roofing</option><option>Other</option>
           </select>
         </label>
+        <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
         <label>Current website (if any)<input name="website" placeholder="none"></label>
+        <label>Anything we should know? (optional)<textarea name="message" rows="3" maxlength="2000"></textarea></label>
+        <label class="hp" aria-hidden="true">Leave this empty<input name="company_url" tabindex="-1" autocomplete="off"></label>
         <button type="submit" class="btn btn-yellow btn-block">Send my request</button>
-        <p class="form-note">This opens your email app with your info filled in.</p>
+        <p class="form-note" id="form-note">We'll call you back to talk about your free design.</p>
       </form>
     </div>
   </section>
@@ -230,13 +233,36 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+  // Requests go straight into the AWD CRM ("Inquired" tab). The public key below can only ADD an
+  // inquiry; database rules block it from reading or changing anything. If saving fails, fall back to email.
+  var CRM_URL = 'https://mrklhkseyynmnjzbiokx.supabase.co/rest/v1/inquiries';
+  var CRM_KEY = 'sb_publishable_8SekgbrdzwUzWaMCohwznQ_wPZaOpDo';
   document.getElementById('quote-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    var f = new FormData(this);
-    var body = 'Name: ' + f.get('name') + '\nBusiness: ' + f.get('business') + '\nPhone: ' + f.get('phone') +
-               '\nTrade: ' + f.get('trade') + '\nCurrent website: ' + (f.get('website') || 'none');
-    window.location.href = 'mailto:affordablewebdesignsawd@gmail.com?subject=' +
-      encodeURIComponent('Free design request: ' + f.get('business')) + '&body=' + encodeURIComponent(body);
+    var form = this, f = new FormData(form), btn = form.querySelector('button'), note = document.getElementById('form-note');
+    if (f.get('company_url')) return; // bot filled the hidden field
+    var v = function (k) { return (f.get(k) || '').toString().trim(); };
+    var row = { name: v('name'), business: v('business'), phone: v('phone'), trade: v('trade'),
+                email: v('email') || null, website: v('website') || null, message: v('message') || null };
+    var emailFallback = function () {
+      var body = 'Name: ' + row.name + '\nBusiness: ' + row.business + '\nPhone: ' + row.phone + '\nTrade: ' + row.trade +
+                 '\nEmail: ' + (row.email || '') + '\nCurrent website: ' + (row.website || 'none') + '\n\n' + (row.message || '');
+      window.location.href = 'mailto:affordablewebdesignsawd@gmail.com?subject=' +
+        encodeURIComponent('Free design request: ' + row.business) + '&body=' + encodeURIComponent(body);
+    };
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch(CRM_URL, { method: 'POST', headers: { 'apikey': CRM_KEY, 'Content-Type': 'application/json', 'Prefer': 'return=minimal' }, body: JSON.stringify(row) })
+      .then(function (r) {
+        if (!r.ok) throw new Error('save failed');
+        form.innerHTML = '<div class="form-done"><h3>Thanks, ' + row.name.split(' ')[0].replace(/[<>&"]/g, '') + '!</h3>' +
+          '<p>We got your request and will call you soon to talk about your free design.</p>' +
+          '<p>Need us sooner? Call or text <a href="tel:+18325080059">832-508-0059</a>.</p></div>';
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = 'Send my request';
+        note.textContent = "Couldn't send it online, so we opened your email app instead.";
+        emailFallback();
+      });
   });
 </script>
 </body>

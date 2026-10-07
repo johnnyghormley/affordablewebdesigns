@@ -141,3 +141,13 @@ a { color: inherit; }
   .section { padding: 60px 0; }
   .hero { padding: 44px 0 64px; }
 }
+
+/* Quote form: textarea, honeypot, thank-you */
+.form textarea { font: inherit; font-weight: 400; padding: 12px 14px; border: 1px solid #D1D5DB; border-radius: 10px; background: #fff; color: var(--charcoal); resize: vertical; }
+.form textarea:focus { outline: 3px solid var(--yellow); border-color: var(--charcoal); }
+.form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form { position: relative; }
+.form-done { text-align: center; padding: 20px 4px; }
+.form-done h3 { margin: 0 0 10px; font-size: 24px; }
+.form-done p { margin: 0 0 8px; }
+.form-done a { font-weight: 700; color: var(--charcoal); }
