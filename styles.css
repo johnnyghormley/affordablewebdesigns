@@ -79,7 +79,7 @@ a { color: inherit; }
 .num { width: 44px; height: 44px; border-radius: 10px; background: var(--charcoal); color: var(--yellow); font-family: Montserrat, sans-serif; font-weight: 800; font-size: 20px; display: grid; place-items: center; margin-bottom: 16px; }
 .step p { color: #4B5563; margin: 0; }
 
-.plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 880px; }
+.plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1120px; }
 .plan { background: #fff; color: var(--charcoal); border-radius: var(--radius); padding: 30px; border: 3px solid transparent; display: flex; flex-direction: column; }
 .plan-featured { border-color: var(--yellow); }
 .plan-tag { margin: 0 0 6px; font-size: 14px; color: var(--steel); font-weight: 500; }
@@ -157,3 +157,4 @@ a { color: inherit; }
 .social:hover { opacity: 1; color: var(--yellow); background: rgba(255,255,255,.08); }
 .social:focus-visible { outline: 3px solid var(--yellow); outline-offset: 2px; }
 .social + .social { margin-left: -12px; }
+@media (max-width: 1000px) and (min-width: 721px) { .plans { grid-template-columns: repeat(2, 1fr); } }
