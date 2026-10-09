@@ -229,6 +229,14 @@
         <label>Type of business<input name="trade" maxlength="60" placeholder="e.g. salon, restaurant, plumbing"></label>
         <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
         <label>Current website (if any)<input name="website" placeholder="none"></label>
+        <label>How did you hear about us?
+          <select name="source" id="source">
+            <option value="">Choose one (optional)</option>
+            <option>Google search</option><option>Google Maps</option><option>Facebook</option><option>LinkedIn</option>
+            <option>Nextdoor</option><option>Friend or referral</option><option>Johnny called, texted or emailed me</option>
+            <option>Met Johnny in person</option><option>Other</option>
+          </select>
+        </label>
         <label>Anything we should know? (optional)<textarea name="message" rows="3" maxlength="2000"></textarea></label>
         <label class="hp" aria-hidden="true">Leave this empty<input name="company_url" tabindex="-1" autocomplete="off"></label>
         <button type="submit" class="btn btn-yellow btn-block">Send my request</button>
@@ -252,16 +260,24 @@
   // inquiry; database rules block it from reading or changing anything. If saving fails, fall back to email.
   var CRM_URL = 'https://mrklhkseyynmnjzbiokx.supabase.co/rest/v1/inquiries';
   var CRM_KEY = 'sb_publishable_8SekgbrdzwUzWaMCohwznQ_wPZaOpDo';
+  // Links can preselect "How did you hear about us?": ?src=google|maps|facebook|linkedin|nextdoor|referral|call|person
+  (function () {
+    var m = { google: 'Google search', maps: 'Google Maps', facebook: 'Facebook', linkedin: 'LinkedIn', nextdoor: 'Nextdoor',
+              referral: 'Friend or referral', call: 'Johnny called, texted or emailed me', person: 'Met Johnny in person' };
+    var src = (new URLSearchParams(location.search).get('src') || '').toLowerCase();
+    if (m[src]) document.getElementById('source').value = m[src];
+  })();
   document.getElementById('quote-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var form = this, f = new FormData(form), btn = form.querySelector('button'), note = document.getElementById('form-note');
     if (f.get('company_url')) return; // bot filled the hidden field
     var v = function (k) { return (f.get(k) || '').toString().trim(); };
     var row = { name: v('name'), business: v('business'), phone: v('phone'), trade: v('trade'),
-                email: v('email') || null, website: v('website') || null, message: v('message') || null };
+                email: v('email') || null, website: v('website') || null, message: v('message') || null,
+                source: v('source') || null };
     var emailFallback = function () {
       var body = 'Name: ' + row.name + '\nBusiness: ' + row.business + '\nPhone: ' + row.phone + '\nType of business: ' + row.trade +
-                 '\nEmail: ' + (row.email || '') + '\nCurrent website: ' + (row.website || 'none') + '\n\n' + (row.message || '');
+                 '\nEmail: ' + (row.email || '') + '\nCurrent website: ' + (row.website || 'none') + '\nHeard about us: ' + (row.source || '') + '\n\n' + (row.message || '');
       window.location.href = 'mailto:affordablewebdesignsawd@gmail.com?subject=' +
         encodeURIComponent('Free design request: ' + row.business) + '&body=' + encodeURIComponent(body);
     };
