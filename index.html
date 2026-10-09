@@ -232,7 +232,7 @@
         <label>Anything we should know? (optional)<textarea name="message" rows="3" maxlength="2000"></textarea></label>
         <label class="hp" aria-hidden="true">Leave this empty<input name="company_url" tabindex="-1" autocomplete="off"></label>
         <button type="submit" class="btn btn-yellow btn-block">Send my request</button>
-        <p class="form-note" id="form-note">We'll call you back to talk about your free design.</p>
+        <p class="form-note" id="form-note">We'll call you back to talk about your free design.<br><b>Estimated callback: 1 business day.</b></p>
       </form>
     </div>
   </section>
@@ -270,7 +270,7 @@
       .then(function (r) {
         if (!r.ok) throw new Error('save failed');
         form.innerHTML = '<div class="form-done"><h3>Thanks, ' + row.name.split(' ')[0].replace(/[<>&"]/g, '') + '!</h3>' +
-          '<p>We got your request and will call you soon to talk about your free design.</p>' +
+          '<p>We got your request and will call you within 1 business day to talk about your free design.</p>' +
           '<p>Need us sooner? Call or text <a href="tel:+18325080059">832-508-0059</a>.</p></div>';
       })
       .catch(function () {
