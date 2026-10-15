@@ -83,7 +83,7 @@
   .btns { display: flex; flex-wrap: wrap; gap: 14px; }
   .ruo { margin-top: 26px; font-family: var(--display); font-size: 11.5px; letter-spacing: .26em; color: var(--muted); text-transform: uppercase; }
   .vial-wrap { display: flex; justify-content: center; }
-  .vial { width: min(330px, 80vw); height: auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,.7)); }
+  .vial { width: min(320px, 70vw); height: auto; }
 
   /* standards strip */
   .standards { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-2); padding: 40px 0; }
@@ -182,7 +182,7 @@
   @media (max-width: 960px) {
     nav { display: none; }
     .hero-grid, .commit, .cgrid { grid-template-columns: 1fr; gap: 44px; }
-    .vial-wrap { order: -1; } .vial { width: 220px; }
+    .vial-wrap { order: -1; } .vial { width: 190px; }
     .grid4 { grid-template-columns: 1fr 1fr; }
     .steps { grid-template-columns: 1fr; }
   }
@@ -243,34 +243,8 @@
     <p class="ruo">For research use only. Not for human consumption.</p>
   </div>
   <div class="vial-wrap">
-    <!-- Illustrated vial with the Stone Research Labs label (drawn in SVG, not a photo) -->
-    <svg class="vial" viewBox="0 0 300 470" role="img" aria-label="Illustration of a Stone Research Labs vial: MT-1 10 mg, research use only, 99.5% purity">
-      <defs>
-        <linearGradient id="vg" x1="0" x2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset=".18" stop-color="#6f6f6f" stop-opacity=".55"/><stop offset=".32" stop-color="#1b1b1b" stop-opacity=".3"/><stop offset=".85" stop-color="#3a3a3a" stop-opacity=".35"/><stop offset="1" stop-color="#151515"/></linearGradient>
-        <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C6A2E"/><stop offset=".3" stop-color="#E8CD8A"/><stop offset=".5" stop-color="#B8903F"/><stop offset=".75" stop-color="#F2DEA0"/><stop offset="1" stop-color="#9A7733"/></linearGradient>
-        <linearGradient id="cap" x1="0" x2="1"><stop offset="0" stop-color="#0d0d0d"/><stop offset=".3" stop-color="#3b3b3b"/><stop offset=".55" stop-color="#151515"/><stop offset="1" stop-color="#050505"/></linearGradient>
-      </defs>
-      <ellipse cx="150" cy="458" rx="110" ry="9" fill="#000" opacity=".8"/>
-      <rect x="92" y="6" width="116" height="58" rx="6" fill="url(#cap)"/>
-      <rect x="92" y="52" width="116" height="20" fill="url(#fg)"/>
-      <rect x="100" y="72" width="100" height="26" fill="url(#vg)"/>
-      <path d="M100 98 C100 116 58 116 58 140 L58 430 Q58 452 80 452 L220 452 Q242 452 242 430 L242 140 C242 116 200 116 200 98 Z" fill="url(#vg)" stroke="#5a5a5a" stroke-opacity=".6"/>
-      <path d="M66 398 L234 398 L234 430 Q234 444 220 444 L80 444 Q66 444 66 430 Z" fill="#e9e4da" opacity=".85"/>
-      <rect x="58" y="178" width="184" height="196" fill="#070707"/>
-      <g fill="none" stroke="url(#fg)">
-        <path d="M76 186 L224 186 A10 10 0 0 0 234 196 L234 356 A10 10 0 0 0 224 366 L76 366 A10 10 0 0 0 66 356 L66 196 A10 10 0 0 0 76 186 Z" stroke-width="1.6"/>
-        <path d="M80 192 L220 192 A8 8 0 0 0 228 200 L228 352 A8 8 0 0 0 220 360 L80 360 A8 8 0 0 0 72 352 L72 200 A8 8 0 0 0 80 192 Z" stroke-width=".7"/>
-      </g>
-      <g fill="url(#fg)" font-family="Cinzel, Georgia, serif" text-anchor="middle">
-        <text x="150" y="238" font-size="19" font-weight="600" letter-spacing="2.5">STONE</text>
-        <text x="150" y="258" font-size="11" font-weight="500" letter-spacing="2.4">RESEARCH LABS</text>
-        <path d="M108 272 H140 M160 272 H192" stroke="url(#fg)" stroke-width=".8"/><path d="M150 268 L154 272 L150 276 L146 272Z"/>
-        <text x="150" y="304" font-size="18" font-weight="600" letter-spacing="1.5">MT-1 10MG</text>
-        <text x="150" y="328" font-size="8.5" letter-spacing="1.6">RESEARCH USE ONLY</text>
-        <text x="150" y="344" font-size="8.5" letter-spacing="1.6">99.5% PURITY</text>
-      </g>
-      <path d="M78 140 L78 420" stroke="#fff" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
-    </svg>
+    <!-- Rendered product shot of a Stone Research Labs vial (procedurally rendered for AWD; no stock or AI imagery) -->
+    <img class="vial" src="vial.webp" width="444" height="830" alt="Stone Research Labs vial, MT-1 10 mg, research use only, 99.5% purity" fetchpriority="high">
   </div>
 </div></section>
 
