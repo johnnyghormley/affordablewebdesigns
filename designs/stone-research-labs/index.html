@@ -122,6 +122,10 @@
   .pay-opts small { display: block; font-size: 11px; letter-spacing: .28em; color: var(--muted); text-transform: uppercase; }
   .pay p { margin: 18px 0 0; color: var(--muted); font-size: 18px; }
   .clink.static { cursor: default; }
+  .form-status { margin: 14px 0 0; padding: 12px 14px; border: 1px solid var(--gold); color: var(--gold-hi); font-size: 17px; line-height: 1.45; }
+  .form-status.err { border-color: #a0523d; }
+  .form-status a { color: var(--gold-hi); }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   .price-note { margin: 26px 0 0; text-align: center; color: var(--muted); font-size: 18px; }
   .offers { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 34px; margin: 26px 0 0; font-family: var(--display); font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); }
   .offers span::before { content: "\25C6"; color: var(--gold); margin-right: 10px; font-size: 9px; vertical-align: 2px; }
@@ -348,7 +352,9 @@
     <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required>
     <label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel">
     <label for="f-items">Compounds, sizes &amp; quantities</label><textarea id="f-items" name="items" required></textarea>
+    <div class="hp" aria-hidden="true"><label for="f-honey">Leave blank</label><input id="f-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
     <button class="btn btn-gold" type="submit">Send Request</button>
+    <p class="form-status" id="formStatus" role="status" hidden></p>
     <p class="secure">Your information is secure and never shared.</p>
   </form>
 </div></section>
@@ -368,11 +374,33 @@
       el.insertAdjacentHTML('beforeend', '<svg class="c ' + p + '" aria-hidden="true"><use href="#corner"/></svg>');
     });
   });
-  // Order form opens the visitor's email app addressed to Nathan (no online checkout)
-  document.getElementById('orderForm').addEventListener('submit', function (e) {
+  // Order form: sends the request straight to Nathan's inbox through FormSubmit (formsubmit.co).
+  // If that service can't be reached, it falls back to opening the visitor's email app.
+  var form = document.getElementById('orderForm'), note = document.getElementById('formStatus');
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var el = e.target.elements, body = 'Name: ' + el['name'].value + '\nEmail: ' + el['email'].value + '\nPhone: ' + el['phone'].value + '\n\nRequest:\n' + el['items'].value;
-    location.href = 'mailto:Nathan.Taufer@Hotmail.com?subject=' + encodeURIComponent('Stone Research Labs order request') + '&body=' + encodeURIComponent(body);
+    var el = form.elements, btn = form.querySelector('button[type=submit]');
+    if (el['_honey'].value) return; // spam bot filled the hidden field
+    var data = {
+      name: el['name'].value, email: el['email'].value, phone: el['phone'].value, request: el['items'].value,
+      _subject: 'New order request from ' + el['name'].value + ' (stone-research-labs.com)',
+      _template: 'table', _replyto: el['email'].value
+    };
+    btn.disabled = true; btn.textContent = 'Sending…'; note.hidden = true;
+    fetch('https://formsubmit.co/ajax/Nathan.Taufer@Hotmail.com', {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data)
+    }).then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || 'failed'); }); })
+      .then(function () {
+        form.reset();
+        note.textContent = 'Thank you. Your request was sent to Nathan, and he will reply by email to confirm your order and total.';
+        note.className = 'form-status ok'; note.hidden = false; btn.textContent = 'Request Sent';
+      })
+      .catch(function () {
+        var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nPhone: ' + data.phone + '\n\nRequest:\n' + data.request;
+        note.innerHTML = 'We couldn\'t send that automatically. Please email your request to <a href="mailto:Nathan.Taufer@Hotmail.com">Nathan.Taufer@Hotmail.com</a>.';
+        note.className = 'form-status err'; note.hidden = false; btn.disabled = false; btn.textContent = 'Send Request';
+        location.href = 'mailto:Nathan.Taufer@Hotmail.com?subject=' + encodeURIComponent('Stone Research Labs order request') + '&body=' + encodeURIComponent(body);
+      });
   });
 </script>
 </body>
