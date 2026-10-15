@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Stone Research Labs | Research-Grade Peptides</title>
+<meta name="description" content="Stone Research Labs: research-grade peptides, third-party tested, research use only. Order by email or phone.">
+<link rel="icon" href="logo/stone-research-labs-monogram.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ============ THEME: edit these to re-theme the whole page ============ */
+  :root {
+    --bg: #0A0A0A;          /* page black */
+    --bg-2: #111110;        /* raised panels */
+    --bg-3: #171614;        /* cards */
+    --gold: #C9A55C;        /* flat gold for lines, icons, ornaments */
+    --gold-hi: #F1DDA0;     /* foil highlight */
+    --gold-lo: #8C6A2E;     /* foil shadow */
+    --foil: linear-gradient(115deg, #8C6A2E 0%, #E8CD8A 28%, #B8903F 50%, #F2DEA0 74%, #9A7733 100%);
+    --ink: #EDE6D6;         /* body text on black */
+    --muted: #A99F8B;       /* secondary text */
+    --line: rgba(201,165,92,.38);
+    --display: "Cinzel", "Trajan Pro", Georgia, serif;
+    --body: "Cormorant Garamond", Georgia, serif;
+  }
+  /* ===================================================================== */
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 20px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  img, svg { display: block; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 22px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; letter-spacing: .08em; line-height: 1.15; margin: 0 0 .5em; text-transform: uppercase; }
+  .foil { background: var(--foil); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .eyebrow { font-family: var(--display); font-size: 13px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); margin: 0 0 18px; }
+  .lede { color: var(--muted); font-size: 22px; max-width: 640px; }
+
+  /* preview bar + offer ribbon */
+  .preview { background: #1F2937; color: #F9FAFB; font: 13px/1.4 system-ui, sans-serif; text-align: center; padding: 7px 12px; }
+  .preview b { color: #FACC15; } .preview a { color: #FACC15; font-weight: 600; }
+  .ribbon { border-bottom: 1px solid var(--line); text-align: center; padding: 9px 12px; font-family: var(--display); font-size: 12px; letter-spacing: .22em; color: var(--gold-hi); text-transform: uppercase; }
+  .ribbon i { font-style: normal; color: var(--gold); margin: 0 12px; }
+
+  /* header */
+  header { position: sticky; top: 0; z-index: 20; background: rgba(10,10,10,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 78px; }
+  .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .brand img { width: 48px; height: 48px; }
+  .brand span { font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: .2em; line-height: 1.15; }
+  .brand small { display: block; font-size: 10.5px; letter-spacing: .38em; font-weight: 500; color: var(--gold); }
+  nav { display: flex; gap: 28px; font-family: var(--display); font-size: 12.5px; letter-spacing: .22em; text-transform: uppercase; }
+  nav a { text-decoration: none; color: var(--ink); opacity: .85; } nav a:hover { color: var(--gold-hi); opacity: 1; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--display); font-size: 13px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; padding: 15px 26px; border-radius: 2px; white-space: nowrap; transition: filter .2s, background .2s; }
+  .btn-gold { background: var(--foil); color: #14110A; box-shadow: 0 0 0 1px rgba(241,221,160,.25) inset; }
+  .btn-gold:hover { filter: brightness(1.08); }
+  .btn-line { border: 1px solid var(--gold); color: var(--gold-hi); }
+  .btn-line:hover { background: rgba(201,165,92,.1); }
+  .btn svg { width: 16px; height: 16px; flex: none; }
+  .head .btn { padding: 12px 18px; } .head .btn .short { display: none; }
+
+  /* ornamental frame (corners injected by script at bottom; colour = --gold) */
+  .frame { position: relative; border: 1px solid var(--line); outline: 1px solid var(--line); outline-offset: 7px; }
+  .frame .c { position: absolute; width: 46px; height: 46px; color: var(--gold); pointer-events: none; }
+  .frame .c.tl { top: 6px; left: 6px; } .frame .c.tr { top: 6px; right: 6px; transform: scaleX(-1); }
+  .frame .c.bl { bottom: 6px; left: 6px; transform: scaleY(-1); } .frame .c.br { bottom: 6px; right: 6px; transform: scale(-1,-1); }
+
+  /* rule with diamond */
+  .rule { display: flex; align-items: center; gap: 12px; color: var(--gold); margin: 22px 0; max-width: 340px; }
+  .rule::before, .rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+  .rule::after { background: linear-gradient(90deg, var(--gold), transparent); }
+  .rule.center { margin-left: auto; margin-right: auto; }
+  .rule svg { width: 44px; height: 10px; }
+
+  /* hero */
+  .hero { padding: 72px 0 96px; position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 70% at 78% 40%, rgba(201,165,92,.13), transparent 70%); pointer-events: none; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; position: relative; }
+  .hero h1 { font-size: clamp(36px, 5.2vw, 64px); letter-spacing: .06em; margin-bottom: .3em; }
+  .hero h1 span { display: block; }
+  .hero .lede { margin: 0 0 32px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 14px; }
+  .ruo { margin-top: 26px; font-family: var(--display); font-size: 11.5px; letter-spacing: .26em; color: var(--muted); text-transform: uppercase; }
+  .vial-wrap { display: flex; justify-content: center; }
+  .vial { width: min(330px, 80vw); height: auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,.7)); }
+
+  /* standards strip */
+  .standards { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-2); padding: 40px 0; }
+  .std { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; text-align: center; }
+  .std div { display: flex; flex-direction: column; align-items: center; gap: 12px; font-family: var(--display); font-size: 14px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-hi); }
+  .std svg { width: 38px; height: 38px; color: var(--gold); }
+  .std-tag { text-align: center; margin: 28px 0 0; font-style: italic; color: var(--muted); font-size: 21px; }
+
+  section { padding: 96px 0; }
+  .center { text-align: center; }
+  .center .lede { margin-left: auto; margin-right: auto; }
+  h2 { font-size: clamp(28px, 3.6vw, 42px); }
+
+  /* price list */
+  .price-panel { max-width: 880px; margin: 46px auto 0; background: var(--bg-2); padding: 60px 64px 64px; }
+  .price-panel h3 { text-align: center; font-size: 15px; letter-spacing: .34em; color: var(--gold); margin-bottom: 26px; }
+  table { width: 100%; border-collapse: collapse; text-align: left; }
+  td.size { white-space: nowrap; }
+  th { font-family: var(--display); font-weight: 500; font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 0 10px 14px; border-bottom: 1px solid var(--gold); }
+  td { padding: 20px 10px; border-bottom: 1px solid var(--line); vertical-align: baseline; }
+  td.name { font-family: var(--display); font-size: 20px; letter-spacing: .1em; color: var(--gold-hi); }
+  td.name small { display: block; font-family: var(--body); font-size: 16px; letter-spacing: 0; color: var(--muted); font-style: italic; }
+  td.price { text-align: right; font-style: italic; color: var(--ink); white-space: nowrap; }
+  th.r { text-align: right; }
+  .price-note { margin: 26px 0 0; text-align: center; color: var(--muted); font-size: 18px; }
+  .offers { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 34px; margin: 26px 0 0; font-family: var(--display); font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); }
+  .offers span::before { content: "\25C6"; color: var(--gold); margin-right: 10px; font-size: 9px; vertical-align: 2px; }
+  .disclaimer { margin: 30px auto 0; padding: 14px 18px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: center; font-family: var(--display); font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); max-width: 620px; }
+  .price-cta { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+
+  /* research areas */
+  .areas { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 46px; }
+  .card { background: var(--bg-3); padding: 50px 30px 56px; text-align: center; }
+  .card svg.ic { width: 40px; height: 40px; color: var(--gold); margin: 0 auto 18px; }
+  .card h3 { font-size: 16px; letter-spacing: .18em; color: var(--gold-hi); }
+  .card .mini { width: 46px; height: 1px; background: var(--gold); margin: 14px auto 16px; }
+  .card p { margin: 0; color: var(--muted); font-size: 18.5px; line-height: 1.5; }
+
+  /* commitment */
+  .commit { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
+  .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .pillars div { padding: 30px 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .pillars h3 { font-size: 15px; letter-spacing: .2em; color: var(--gold-hi); margin-bottom: .6em; }
+  .pillars p { margin: 0; color: var(--muted); font-size: 18.5px; line-height: 1.5; }
+  .quote { font-family: var(--display); font-size: clamp(22px, 2.6vw, 30px); letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; margin: 0; }
+
+  /* how to order */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 46px; counter-reset: s; }
+  .step { padding: 50px 46px 56px; background: var(--bg-2); text-align: center; }
+  .step .num { font-family: var(--display); font-size: 40px; line-height: 1; margin-bottom: 14px; }
+  .step h3 { font-size: 15px; letter-spacing: .2em; color: var(--gold-hi); }
+  .step p { margin: 0; color: var(--muted); font-size: 18.5px; line-height: 1.5; }
+
+  /* contact */
+  .contact { background: var(--bg-2); border-top: 1px solid var(--line); }
+  .cgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .clinks { display: grid; gap: 16px; margin: 30px 0 0; }
+  .clink { display: flex; align-items: center; gap: 18px; padding: 22px 24px; background: var(--bg); border: 1px solid var(--line); text-decoration: none; transition: border-color .2s; }
+  .clink:hover { border-color: var(--gold); }
+  .clink svg { width: 26px; height: 26px; color: var(--gold); flex: none; }
+  .clink b { display: block; font-family: var(--display); font-weight: 500; font-size: 11.5px; letter-spacing: .26em; color: var(--muted); text-transform: uppercase; }
+  .clink span { font-family: var(--display); font-size: clamp(17px, 2vw, 22px); letter-spacing: .06em; color: var(--gold-hi); }
+  .clink span.mail { font-family: var(--body); font-size: clamp(19px, 2.2vw, 24px); letter-spacing: .02em; font-weight: 500; }
+  form { background: var(--bg); padding: 50px 40px 56px; }
+  form h3 { font-size: 16px; letter-spacing: .24em; color: var(--gold); text-align: center; margin-bottom: 22px; }
+  label { display: block; font-family: var(--display); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin: 0 0 6px; }
+  input, textarea { width: 100%; background: transparent; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); font: 19px var(--body); padding: 8px 2px 10px; margin-bottom: 20px; outline: none; }
+  input:focus, textarea:focus { border-bottom-color: var(--gold-hi); }
+  textarea { resize: vertical; min-height: 96px; }
+  form .btn { width: 100%; border: 0; cursor: pointer; }
+  .secure { text-align: center; margin: 14px 0 0; font-size: 16px; font-style: italic; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--gold); padding: 64px 0 40px; text-align: center; }
+  footer img { width: 300px; max-width: 80%; height: auto; margin: 0 auto 28px; }
+  .fcontact { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 32px; font-family: var(--display); font-size: 14px; letter-spacing: .14em; }
+  .fcontact a { text-decoration: none; color: var(--gold-hi); }
+  .fcontact a.mail { font-family: var(--body); font-size: 19px; letter-spacing: .02em; }
+  .fdisc { margin: 28px auto 0; max-width: 640px; font-family: var(--display); font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-hi); line-height: 1.8; }
+  .fine { margin-top: 18px; color: var(--muted); font-size: 15.5px; }
+
+  @media (max-width: 960px) {
+    nav { display: none; }
+    .hero-grid, .commit, .cgrid { grid-template-columns: 1fr; gap: 44px; }
+    .vial-wrap { order: -1; } .vial { width: 220px; }
+    .grid4 { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 19px; }
+    section { padding: 70px 0; }
+    .hero { padding: 44px 0 70px; }
+    .head { height: 66px; }
+    .brand img { width: 38px; height: 38px; } .brand span { font-size: 13px; letter-spacing: .14em; } .brand small { font-size: 8.5px; letter-spacing: .3em; }
+    .head .btn { padding: 10px 12px; font-size: 11px; letter-spacing: .12em; }
+    .head .btn .long { display: none; } .head .btn .short { display: inline; }
+    .std { grid-template-columns: 1fr; gap: 26px; }
+    .grid4 { grid-template-columns: 1fr; }
+    .pillars { grid-template-columns: 1fr; }
+    .price-panel { padding: 56px 22px 66px; }
+    .eyebrow { letter-spacing: .22em; }
+    .step { padding: 50px 40px 56px; }
+    th.hide, td.hide { display: none; }
+    td.name { font-size: 17px; }
+    .btns .btn, .price-cta .btn { width: 100%; }
+    .ribbon { font-size: 10.5px; letter-spacing: .14em; }
+    .ribbon i { display: block; height: 0; overflow: hidden; margin: 0; }
+    form { padding: 50px 24px 56px; }
+    .clink { padding: 18px; gap: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Reusable ornaments: colour comes from currentColor, so they follow --gold -->
+  <symbol id="corner" viewBox="0 0 46 46"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M4 30 C4 15 15 4 30 4 C41 4 45 12 40 17 C36 21 30 18 33 13"/><path d="M4 30 C4 41 12 45 17 40 C21 36 18 30 13 33"/></g><circle cx="13" cy="13" r="2" fill="currentColor"/></symbol>
+  <symbol id="diamond" viewBox="0 0 44 10"><circle cx="5" cy="5" r="1.8" fill="currentColor"/><path d="M22 0 L27 5 L22 10 L17 5Z" fill="currentColor"/><circle cx="39" cy="5" r="1.8" fill="currentColor"/></symbol>
+</svg>
+
+<div class="preview">Free design preview for <b>Stone Research Labs</b> by Affordable Web Designs · Like it? <a href="tel:+18325080059">Call Johnny 832-508-0059</a></div>
+<div class="ribbon">All orders $250+ ship free <i>&#9670;</i> 10% off all orders $500+</div>
+
+<header><div class="wrap head">
+  <a class="brand" href="#top"><img src="logo/stone-research-labs-monogram.svg" alt=""><span>Stone<small>Research Labs</small></span></a>
+  <nav><a href="#standards">Standards</a><a href="#price-list">Price List</a><a href="#research">Research Areas</a><a href="#order">Order</a></nav>
+  <a class="btn btn-gold" href="tel:+13609293463"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="long">360-929-3463</span><span class="short">Call</span></a>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <p class="eyebrow">Precision &middot; Purity &middot; Performance</p>
+    <h1><span class="foil">Built on Science.</span><span>Trusted by Professionals.</span></h1>
+    <div class="rule"><svg><use href="#diamond"/></svg></div>
+    <p class="lede">Research-grade peptides manufactured with precision, tested for purity, and delivered with confidence.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="#price-list">View the Price List</a>
+      <a class="btn btn-line" href="mailto:Nathan.Taufer@Hotmail.com?subject=Stone%20Research%20Labs%20order%20request">Request an Order</a>
+    </div>
+    <p class="ruo">For research use only. Not for human consumption.</p>
+  </div>
+  <div class="vial-wrap">
+    <!-- Illustrated vial with the Stone Research Labs label (drawn in SVG, not a photo) -->
+    <svg class="vial" viewBox="0 0 300 470" role="img" aria-label="Illustration of a Stone Research Labs vial: MT-1 10 mg, research use only, 99.5% purity">
+      <defs>
+        <linearGradient id="vg" x1="0" x2="1"><stop offset="0" stop-color="#2a2a2a"/><stop offset=".18" stop-color="#6f6f6f" stop-opacity=".55"/><stop offset=".32" stop-color="#1b1b1b" stop-opacity=".3"/><stop offset=".85" stop-color="#3a3a3a" stop-opacity=".35"/><stop offset="1" stop-color="#151515"/></linearGradient>
+        <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8C6A2E"/><stop offset=".3" stop-color="#E8CD8A"/><stop offset=".5" stop-color="#B8903F"/><stop offset=".75" stop-color="#F2DEA0"/><stop offset="1" stop-color="#9A7733"/></linearGradient>
+        <linearGradient id="cap" x1="0" x2="1"><stop offset="0" stop-color="#0d0d0d"/><stop offset=".3" stop-color="#3b3b3b"/><stop offset=".55" stop-color="#151515"/><stop offset="1" stop-color="#050505"/></linearGradient>
+      </defs>
+      <ellipse cx="150" cy="458" rx="110" ry="9" fill="#000" opacity=".8"/>
+      <rect x="92" y="6" width="116" height="58" rx="6" fill="url(#cap)"/>
+      <rect x="92" y="52" width="116" height="20" fill="url(#fg)"/>
+      <rect x="100" y="72" width="100" height="26" fill="url(#vg)"/>
+      <path d="M100 98 C100 116 58 116 58 140 L58 430 Q58 452 80 452 L220 452 Q242 452 242 430 L242 140 C242 116 200 116 200 98 Z" fill="url(#vg)" stroke="#5a5a5a" stroke-opacity=".6"/>
+      <path d="M66 398 L234 398 L234 430 Q234 444 220 444 L80 444 Q66 444 66 430 Z" fill="#e9e4da" opacity=".85"/>
+      <rect x="58" y="178" width="184" height="196" fill="#070707"/>
+      <g fill="none" stroke="url(#fg)">
+        <path d="M76 186 L224 186 A10 10 0 0 0 234 196 L234 356 A10 10 0 0 0 224 366 L76 366 A10 10 0 0 0 66 356 L66 196 A10 10 0 0 0 76 186 Z" stroke-width="1.6"/>
+        <path d="M80 192 L220 192 A8 8 0 0 0 228 200 L228 352 A8 8 0 0 0 220 360 L80 360 A8 8 0 0 0 72 352 L72 200 A8 8 0 0 0 80 192 Z" stroke-width=".7"/>
+      </g>
+      <g fill="url(#fg)" font-family="Cinzel, Georgia, serif" text-anchor="middle">
+        <text x="150" y="238" font-size="19" font-weight="600" letter-spacing="2.5">STONE</text>
+        <text x="150" y="258" font-size="11" font-weight="500" letter-spacing="2.4">RESEARCH LABS</text>
+        <path d="M108 272 H140 M160 272 H192" stroke="url(#fg)" stroke-width=".8"/><path d="M150 268 L154 272 L150 276 L146 272Z"/>
+        <text x="150" y="304" font-size="18" font-weight="600" letter-spacing="1.5">MT-1 10MG</text>
+        <text x="150" y="328" font-size="8.5" letter-spacing="1.6">RESEARCH USE ONLY</text>
+        <text x="150" y="344" font-size="8.5" letter-spacing="1.6">99.5% PURITY</text>
+      </g>
+      <path d="M78 140 L78 420" stroke="#fff" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div></section>
+
+<div class="standards" id="standards"><div class="wrap">
+  <div class="std">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M12 2.5 4 5.5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10v-6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Third-Party Tested</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M9 2.5h6M10 2.5v6.2L4.6 18.4A2 2 0 0 0 6.4 21.5h11.2a2 2 0 0 0 1.8-3.1L14 8.7V2.5"/><path d="M7.2 15h9.6"/></svg>Research Use Only</div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></svg>Discreet Shipping</div>
+  </div>
+  <p class="std-tag">Quality you can see. Consistency you can count on.</p>
+</div></div>
+
+<section id="price-list"><div class="wrap center">
+  <p class="eyebrow">The Catalog</p>
+  <h2 class="foil">Price List</h2>
+  <div class="rule center"><svg><use href="#diamond"/></svg></div>
+  <p class="lede">A curated selection of high-quality research peptides, manufactured to the highest standards.</p>
+
+  <div class="price-panel frame">
+    <h3>Research Compounds</h3>
+    <table>
+      <thead><tr><th>Compound</th><th>Size</th><th class="hide">Purity</th><th class="r">Price</th></tr></thead>
+      <tbody>
+        <!-- One row per product. Copy a <tr> to add more. -->
+        <tr><td class="name">MT-1<small>Research peptide &middot; 99.5% purity</small></td><td class="size">10 mg</td><td class="hide">99.5%</td><td class="price">Contact for pricing</td></tr>
+      </tbody>
+    </table>
+    <p class="price-note">Full catalog, current availability and pricing are provided on request.<br>Email or call and we'll send the complete list.</p>
+    <div class="offers"><span>All orders $250+ ship free</span><span>10% off all orders $500+</span></div>
+    <p class="disclaimer">For research use only. Not for human consumption.</p>
+    <div class="price-cta">
+      <a class="btn btn-gold" href="mailto:Nathan.Taufer@Hotmail.com?subject=Stone%20Research%20Labs%20price%20list%20request">Email for Pricing</a>
+      <a class="btn btn-line" href="tel:+13609293463">Call 360-929-3463</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="areas" id="research"><div class="wrap center">
+  <p class="eyebrow">Research Areas</p>
+  <h2>Quality Without <span class="foil">Compromise</span></h2>
+  <div class="rule center"><svg><use href="#diamond"/></svg></div>
+  <p class="lede">Research compounds organized by area of laboratory study.</p>
+  <div class="grid4">
+    <div class="card frame"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.3 11 15.7 7M8.3 13l7.4 4"/></svg><h3>Performance</h3><div class="mini"></div><p>Compounds for laboratory research into strength, recovery and endurance pathways.</p></div>
+    <div class="card frame"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><circle cx="7" cy="8" r=".9" fill="currentColor"/><circle cx="17" cy="15.5" r=".9" fill="currentColor"/><circle cx="16" cy="7.5" r=".9" fill="currentColor"/></svg><h3>Cellular &amp; Metabolic</h3><div class="mini"></div><p>Compounds for research into immune, metabolic and cellular pathways.</p></div>
+    <div class="card frame"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><path d="M7 3c0 6 10 6 10 12s-10 3-10 6M17 3c0 6-10 6-10 12s10 3 10 6"/><path d="M8.5 6.5h7M8.5 17.5h7"/></svg><h3>Hormone Research</h3><div class="mini"></div><p>Peptides for endocrine and hormone-pathway research and more.</p></div>
+    <div class="card frame"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1"><circle cx="12" cy="12" r="2.6"/><path d="M12 9.4V3M14.3 13.2l5.2 3.3M9.7 13.2l-5.2 3.3M12 3l-2 -1M12 3l2-1M19.5 16.5l.3 2.2M4.5 16.5l-.3 2.2"/></svg><h3>Neuro &amp; Cognitive</h3><div class="mini"></div><p>Compounds for neurological and cognitive-function research models.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap commit">
+  <div>
+    <p class="eyebrow">Our Commitment</p>
+    <p class="quote"><span class="foil">From raw materials to final product.</span> Every step matters.</p>
+    <div class="rule"><svg><use href="#diamond"/></svg></div>
+    <p class="lede">Stone Research Labs supplies research-grade peptides to professionals. Orders and pricing questions go directly to Nathan Taufer by email or phone.</p>
+  </div>
+  <div class="pillars">
+    <div><h3>Trusted</h3><p>Real research. Real results.</p></div>
+    <div><h3>Strict Standards</h3><p>Manufactured under controlled conditions.</p></div>
+    <div><h3>Rigorous Testing</h3><p>Third-party lab testing for purity and identity.</p></div>
+    <div><h3>Premium Sourcing</h3><p>High-quality raw materials from trusted suppliers.</p></div>
+  </div>
+</div></section>
+
+<section class="areas" id="how"><div class="wrap center">
+  <p class="eyebrow">Ready to Order?</p>
+  <h2>How to <span class="foil">Request an Order</span></h2>
+  <div class="rule center"><svg><use href="#diamond"/></svg></div>
+  <p class="lede">No online checkout. Every order is placed directly with Nathan.</p>
+  <div class="steps">
+    <div class="step frame"><div class="num foil">I</div><h3>Choose</h3><p>Select your compounds and sizes from the price list.</p></div>
+    <div class="step frame"><div class="num foil">II</div><h3>Contact</h3><p>Email or call Nathan with the compound, size and quantity you need.</p></div>
+    <div class="step frame"><div class="num foil">III</div><h3>Confirm</h3><p>Receive availability and your total, and your order ships discreetly.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="order"><div class="wrap cgrid">
+  <div>
+    <p class="eyebrow">Request an Order</p>
+    <h2>Get the peptides you need, <span class="foil">delivered with confidence.</span></h2>
+    <p class="lede">For orders, pricing and the full catalog, contact Nathan Taufer directly.</p>
+    <div class="clinks">
+      <a class="clink" href="mailto:Nathan.Taufer@Hotmail.com?subject=Stone%20Research%20Labs%20order%20request"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><div><b>Email</b><span class="mail">Nathan.Taufer@Hotmail.com</span></div></a>
+      <a class="clink" href="tel:+13609293463"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><div><b>Phone</b><span>360-929-3463</span></div></a>
+    </div>
+  </div>
+  <form class="frame" id="orderForm">
+    <h3>Order Request</h3>
+    <label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required>
+    <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required>
+    <label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel">
+    <label for="f-items">Compounds, sizes &amp; quantities</label><textarea id="f-items" name="items" required></textarea>
+    <button class="btn btn-gold" type="submit">Send Request</button>
+    <p class="secure">Your information is secure and never shared.</p>
+  </form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <img src="logo/stone-research-labs-logo-primary.svg" alt="Stone Research Labs">
+  <div class="fcontact"><a class="mail" href="mailto:Nathan.Taufer@Hotmail.com">Nathan.Taufer@Hotmail.com</a><a href="tel:+13609293463">360-929-3463</a></div>
+  <p class="fdisc">For research use only. Not for human consumption.</p>
+  <p class="fine">&copy; 2026 Stone Research Labs. All products are sold strictly as research compounds.</p>
+</div></footer>
+
+<script>
+  // Ornate corners on every .frame (uses the #corner symbol, coloured by --gold)
+  document.querySelectorAll('.frame').forEach(function (el) {
+    ['tl','tr','bl','br'].forEach(function (p) {
+      el.insertAdjacentHTML('beforeend', '<svg class="c ' + p + '" aria-hidden="true"><use href="#corner"/></svg>');
+    });
+  });
+  // Order form opens the visitor's email app addressed to Nathan (no online checkout)
+  document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var el = e.target.elements, body = 'Name: ' + el['name'].value + '\nEmail: ' + el['email'].value + '\nPhone: ' + el['phone'].value + '\n\nRequest:\n' + el['items'].value;
+    location.href = 'mailto:Nathan.Taufer@Hotmail.com?subject=' + encodeURIComponent('Stone Research Labs order request') + '&body=' + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
