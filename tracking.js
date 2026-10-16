@@ -3,7 +3,7 @@
 // Events: page view on load; "Lead" when the free-design form saves to the CRM; "Contact" when someone taps the phone number.
 (function () {
   var META_PIXEL_ID = '1109866275080402'; // e.g. '1234567890123456'  (Meta Events Manager → Data sources → your pixel)
-  var GA4_ID = '';               // e.g. 'G-ABC123XYZ'       (Google Analytics → Admin → Data streams → Web)
+  var GA4_ID = 'G-G29GJ0HD20';    // e.g. 'G-ABC123XYZ'       (Google Analytics → Admin → Data streams → Web)
   var GOOGLE_ADS_ID = '';        // e.g. 'AW-123456789'      (Google Ads → Goals → Conversions → tag setup)
   var GOOGLE_ADS_LEAD_LABEL = ''; // e.g. 'AbCdEfGhIjK'      (the part after the slash in send_to: 'AW-123456789/AbCdEfGhIjK')
 
