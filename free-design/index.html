@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a Free Website Design | Affordable Web Designs</title>
+<meta name="description" content="Local small businesses in Pasadena, Deer Park, La Porte, Seabrook, South Houston and Dickinson, TX: get your website designed free. You only pay if you love it.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css?v=6">
+<script src="../tracking.js?v=4" defer></script>
+<style>
+  .lp-cities { margin-top: 18px; font-size: .95rem; opacity: .85; }
+  .lp-final { text-align: center; }
+  .lp-final .cta-row { justify-content: center; }
+</style>
+</head>
+<body>
+<!-- Ad landing page ("portal") for AWD's Meta ads. Buttons go to the main site's free-design form and keep the
+     ad's UTM tags, so the form fills in "Facebook/Instagram ad" and the CRM notes which ad brought the request. -->
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="../" class="brand js-keep" aria-label="Affordable Web Designs home">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="12" fill="#FACC15"/><path d="M16 49 L32 15 L48 49" fill="none" stroke="#1F2937" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 37 H41" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/></svg>
+      <span class="brand-text">Affordable Web Designs</span>
+    </a>
+    <a href="tel:+18325080059" class="btn btn-yellow btn-sm">Call 832-508-0059</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <p class="eyebrow">For local small businesses · Bay Area Houston</p>
+        <h1>Your website, <span class="hl">designed free.</span> You only pay if you love it.</h1>
+        <p class="lead">Most web designers charge $1,000 to $3,000. We build your homepage design first, at no cost and with no credit card. If you like it, it's $200 to go live and $50 a month for hosting, updates and a real local person to call.</p>
+        <div class="cta-row">
+          <a href="../#contact" class="btn btn-yellow js-keep">Get my free design</a>
+          <a href="tel:+18325080059" class="btn btn-ghost">Call or text Johnny</a>
+        </div>
+        <ul class="trust">
+          <li>No contracts</li>
+          <li>You own your domain</li>
+          <li>Local support by phone</li>
+        </ul>
+        <p class="lp-cities">Serving Pasadena, Deer Park, La Porte, Seabrook, South Houston and Dickinson.</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="phone">
+          <div class="phone-top"></div>
+          <div class="phone-screen">
+            <div class="ps-head"><span class="ps-logo">Your Shop</span><span class="ps-burger"></span></div>
+            <div class="ps-hero">
+              <b>Open today. Call or stop by.</b>
+              <small>Your hours · Your city</small>
+              <span class="ps-btn">Call now</span>
+            </div>
+            <div class="ps-row"><span></span><span></span><span></span></div>
+            <div class="ps-lines"><i></i><i></i><i style="width:60%"></i></div>
+          </div>
+        </div>
+        <div class="tag-card">Sample design</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow dark">How it works</p>
+      <h2>Three steps. Zero risk.</h2>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>We talk</h3><p>A quick call about your business: your services, your area, what makes you different.</p></div>
+        <div class="step"><div class="num">2</div><h3>You get a free design</h3><p>We build your homepage and send it to you. No cost, no obligation, no credit card.</p></div>
+        <div class="step"><div class="num">3</div><h3>Love it? Go live.</h3><p>Say the word and your site is online, with hosting and support handled. Don't love it? You owe nothing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark lp-final">
+    <div class="container">
+      <h2>Ready to see your new website?</h2>
+      <p class="lead">Tell us about your business. We'll call you within 1 business day.</p>
+      <div class="cta-row">
+        <a href="../#contact" class="btn btn-yellow js-keep">Get my free design</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="yr">2026</span> Affordable Web Designs · Bay Area Houston, TX</span>
+    <span><a href="tel:+18325080059">832-508-0059</a> · <a href="../privacy.html">Privacy</a></span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Carry the ad's tags (utm_*, gclid, src) to the main site so the form knows which ad sent the visitor.
+  (function () {
+    var q = location.search;
+    if (!q) return;
+    document.querySelectorAll('a.js-keep').forEach(function (a) {
+      var parts = a.getAttribute('href').split('#');
+      a.setAttribute('href', parts[0] + q + (parts[1] ? '#' + parts[1] : ''));
+    });
+  })();
+</script>
+</body>
+</html>
