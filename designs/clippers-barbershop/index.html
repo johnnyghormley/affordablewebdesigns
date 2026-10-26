@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Clippers Barbershop | La Porte, TX</title>
+<meta name="description" content="Clippers Barbershop, 9901 Spencer Hwy Ste F, La Porte, TX 77571. Call (832) 496-3061.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* THEME */
+  :root {
+    --ink: #0E1B2C; --navy: #13243A; --navy2: #1C3352; --cream: #F6EFE3; --paper: #FBF7F0;
+    --red: #C8322B; --red2: #A9261F; --brass: #C9A464; --muted: #5E6878; --line: #E6DCCB;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Manrope, system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; overflow-x: hidden; }
+  h1, h2, h3 { margin: 0 0 .45em; line-height: 1.05; }
+  h2 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: clamp(32px, 4.4vw, 50px); color: var(--navy); }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .label { font-family: "Bebas Neue", Manrope, sans-serif; letter-spacing: .16em; font-size: 17px; color: var(--red); margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+  .label::before { content: ""; width: 26px; height: 8px; border-radius: 4px; background: repeating-linear-gradient(135deg, var(--red) 0 5px, #fff 5px 9px, var(--navy2) 9px 14px, #fff 14px 18px); flex: none; }
+
+  .preview { background: #111; color: #EEE; font-size: 13px; text-align: center; padding: 7px 12px; }
+  .preview b { color: #FACC15; } .preview a { color: #FACC15; font-weight: 700; }
+
+  header { position: sticky; top: 0; z-index: 20; background: rgba(19,36,58,.97); backdrop-filter: blur(6px); color: #fff; border-bottom: 3px solid var(--red); }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo .pole { flex: none; }
+  .logo .name { display: grid; line-height: 1; }
+  .logo .name b { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 30px; letter-spacing: .06em; }
+  .logo .name small { font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--brass); font-weight: 700; margin-top: 2px; }
+  nav { display: flex; gap: 22px; font-weight: 600; font-size: 15px; }
+  nav a { text-decoration: none; color: #D9E1EC; } nav a:hover { color: #fff; }
+  .call { display: inline-flex; align-items: center; gap: 8px; background: var(--red); color: #fff; font-weight: 800; text-decoration: none; padding: 12px 18px; border-radius: 999px; white-space: nowrap; box-shadow: 0 6px 18px rgba(200,50,43,.3); }
+  .call:hover { background: var(--red2); }
+
+  .hero { position: relative; background: var(--navy); color: #fff; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(900px 500px at 85% 20%, rgba(201,164,100,.16), transparent 60%), radial-gradient(700px 400px at 0% 100%, rgba(200,50,43,.18), transparent 60%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: center; padding-top: 80px; padding-bottom: 90px; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.22); padding: 6px 14px; border-radius: 999px; font-size: 14px; color: #E4D6BC; margin-bottom: 20px; }
+  .hero h1 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; font-size: clamp(44px, 7vw, 86px); letter-spacing: -.01em; }
+  .hero h1 em { color: var(--brass); }
+  .hero p { font-size: 19px; color: #C9D4E3; max-width: 540px; margin: 0 0 30px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .ghost { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; border: 2px solid rgba(255,255,255,.35); color: #fff; text-decoration: none; font-weight: 700; }
+  .ghost:hover { border-color: #fff; }
+  .seal { justify-self: center; width: min(320px, 80vw); }
+  .stripe { height: 14px; background: repeating-linear-gradient(135deg, var(--red) 0 16px, var(--cream) 16px 28px, var(--navy2) 28px 44px, var(--cream) 44px 56px); }
+
+  section { padding: 84px 0; }
+  .intro { max-width: 640px; color: var(--muted); font-size: 17px; margin: 0; }
+
+  .svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+  .slot { background: #fff; border: 2px dashed var(--line); border-radius: 18px; padding: 26px; min-height: 150px; display: flex; flex-direction: column; gap: 10px; }
+  .slot .ic { width: 48px; height: 48px; border-radius: 14px; background: var(--cream); color: var(--red); display: grid; place-items: center; }
+  .slot .bar { height: 12px; border-radius: 6px; background: #EFE7DA; }
+  .slot .bar.s { width: 55%; } .slot .bar.m { width: 80%; }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  .why { background: var(--cream); }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
+  .fact { background: #fff; border-radius: 18px; padding: 26px; border-top: 5px solid var(--red); box-shadow: 0 10px 30px rgba(19,36,58,.06); }
+  .fact:nth-child(2) { border-top-color: var(--navy2); } .fact:nth-child(3) { border-top-color: var(--brass); }
+  .fact h3 { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 24px; color: var(--navy); }
+  .fact p { margin: 0; color: var(--muted); }
+
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 28px; }
+  .addr { font-size: 20px; font-weight: 700; color: var(--navy); margin: 6px 0 18px; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  td:last-child { text-align: right; color: var(--muted); }
+  td:first-child { font-weight: 700; color: var(--navy); }
+  .map { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); min-height: 380px; background: var(--cream); }
+  .map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
+
+  .about { background: var(--navy); color: #fff; }
+  .about .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 50px; align-items: center; }
+  .about h2 { color: #fff; } .about .label { color: var(--brass); }
+  .about p { color: #C9D4E3; font-size: 17px; }
+  .mono { aspect-ratio: 1; max-width: 340px; width: 100%; justify-self: center; border-radius: 50%; border: 2px solid rgba(201,164,100,.5); display: grid; place-items: center; text-align: center; background: radial-gradient(circle, var(--navy2), var(--navy)); padding: 30px; }
+  .mono b { font-family: "DM Serif Display", serif; font-weight: 400; font-size: 34px; display: block; line-height: 1.1; }
+  .mono small { color: var(--brass); letter-spacing: .25em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+  .lic { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .lic span { border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: 7px 14px; font-size: 14px; color: #E4D6BC; }
+
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .cbox { display: grid; gap: 12px; }
+  .cline { display: flex; gap: 14px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; text-decoration: none; }
+  .cline .ic { width: 46px; height: 46px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; flex: none; }
+  .cline small { display: block; color: var(--muted); font-size: 13px; } .cline b { font-size: 19px; color: var(--navy); }
+
+  footer { background: var(--ink); color: #9AA8BC; padding: 26px 0; font-size: 14px; }
+  .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .foot b { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 22px; letter-spacing: .06em; color: #fff; }
+
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .hero .wrap, .visit .wrap, .about .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .seal { width: 220px; order: -1; justify-self: start; }
+    .svc, .facts { grid-template-columns: 1fr; } .slot { min-height: 0; }
+    section { padding: 60px 0; }
+    .hero .wrap { padding-top: 44px; padding-bottom: 60px; gap: 24px; }
+  }
+  @media (max-width: 440px) {
+    .call .num { display: none; }
+    .logo .name b { font-size: 25px; } .logo .name small { font-size: 9.5px; letter-spacing: .26em; }
+    .hero p { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="preview"><b>Free design preview</b> for Clippers Barbershop by Affordable Web Designs · Like it? <a href="tel:+18325080059">Call Johnny 832-508-0059</a></div>
+
+<header><div class="wrap head">
+  <a class="logo" href="#top" aria-label="Clippers Barbershop home">
+    <svg class="pole" width="22" height="46" viewBox="0 0 22 46" aria-hidden="true"><defs><clipPath id="pc"><rect x="4" y="7" width="14" height="32" rx="3"/></clipPath><pattern id="ps" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="14" height="14" fill="#F6EFE3"/><rect width="4.5" height="14" fill="#C8322B"/><rect x="7" width="4.5" height="14" fill="#2F5A93"/></pattern></defs><rect x="2" y="1" width="18" height="6" rx="3" fill="#C9A464"/><rect x="4" y="7" width="14" height="32" fill="url(#ps)" clip-path="url(#pc)"/><rect x="2" y="39" width="18" height="6" rx="3" fill="#C9A464"/></svg>
+    <span class="name"><b>CLIPPERS</b><small>Barbershop</small></span>
+  </a>
+  <nav><a href="#services">Services</a><a href="#visit">Visit</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <a class="call" href="tel:+18324963061"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="num">(832) 496-3061</span><span>Call</span></a>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Spencer Hwy · La Porte, TX</span>
+    <h1>Fresh cuts on <em>Spencer Hwy.</em></h1>
+    <p>Clippers Barbershop is a state-licensed barbershop in La Porte, owned by a licensed barber. Give us a call or stop by the shop.</p>
+    <div class="btns">
+      <a class="call" href="tel:+18324963061">Call (832) 496-3061</a>
+      <a class="ghost" href="https://www.google.com/maps/search/?api=1&query=9901+Spencer+Hwy+Ste+F+La+Porte+TX+77571" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+  <svg class="seal" viewBox="0 0 320 320" role="img" aria-label="Clippers Barbershop badge">
+    <defs><path id="arc" d="M42 160 a118 118 0 0 1 236 0"/><path id="arc2" d="M38 160 a122 122 0 0 0 244 0"/></defs>
+    <circle cx="160" cy="160" r="152" fill="none" stroke="#C9A464" stroke-width="2"/>
+    <circle cx="160" cy="160" r="140" fill="#1C3352" stroke="#C9A464" stroke-width="1" stroke-dasharray="2 6"/>
+    <text font-family="Bebas Neue, sans-serif" font-size="25" letter-spacing="7" fill="#E4D6BC"><textPath href="#arc" startOffset="50%" text-anchor="middle">CLIPPERS BARBERSHOP</textPath></text>
+    <text font-family="Bebas Neue, sans-serif" font-size="22" letter-spacing="7" fill="#C9A464"><textPath href="#arc2" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">LA PORTE · TEXAS</textPath></text>
+    <circle cx="160" cy="160" r="92" fill="#13243A" stroke="#C8322B" stroke-width="3"/>
+    <g transform="translate(160 160)" fill="none" stroke="#F6EFE3" stroke-width="5" stroke-linecap="round">
+      <circle cx="-26" cy="34" r="13"/><circle cx="26" cy="34" r="13"/>
+      <path d="M-17 24 L22 -46"/><path d="M17 24 L-22 -46"/>
+    </g>
+    <circle cx="160" cy="160" r="5" fill="#C9A464"/>
+  </svg>
+</div></div>
+<div class="stripe" aria-hidden="true"></div>
+
+<section id="services"><div class="wrap">
+  <p class="label">Services</p>
+  <h2>What's in the chair</h2>
+  <p class="intro">Your services and prices go here, exactly the way you offer them.</p>
+  <div class="svc">
+    <div class="slot"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8 16L19 3M16 16L5 3"/></svg></div><div class="bar m"></div><div class="bar s"></div></div>
+    <div class="slot"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="9" width="16" height="7" rx="2"/><path d="M6 9V6M10 9V6M14 9V6M18 9V6M12 16v5"/></svg></div><div class="bar m"></div><div class="bar s"></div></div>
+    <div class="slot"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 20L17 6l2 2L5 22z"/><path d="M15 4l5 5"/></svg></div><div class="bar m"></div><div class="bar s"></div></div>
+  </div>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <p class="label">Why Clippers</p>
+  <h2>Straight facts</h2>
+  <div class="facts">
+    <div class="fact"><h3>Owned by a licensed barber</h3><p>Owner Francisca Regalado Leyva holds a Texas Class A Barber license.</p></div>
+    <div class="fact"><h3>State-licensed shop</h3><p>Licensed by the Texas Department of Licensing and Regulation, establishment license #869618.</p></div>
+    <div class="fact"><h3>Right on Spencer Hwy</h3><p>Suite F at 9901 Spencer Hwy in La Porte.</p></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="card">
+    <p class="label">Visit the shop</p>
+    <h2>Find us</h2>
+    <div class="addr">9901 Spencer Hwy, Ste F<br>La Porte, TX 77571</div>
+    <table aria-label="Hours">
+      <tr><td>Monday</td><td>&nbsp;</td></tr>
+      <tr><td>Tuesday</td><td>&nbsp;</td></tr>
+      <tr><td>Wednesday</td><td>&nbsp;</td></tr>
+      <tr><td>Thursday</td><td>&nbsp;</td></tr>
+      <tr><td>Friday</td><td>&nbsp;</td></tr>
+      <tr><td>Saturday</td><td>&nbsp;</td></tr>
+      <tr><td>Sunday</td><td>&nbsp;</td></tr>
+    </table>
+    <div class="btns" style="margin-top:22px"><a class="call" href="tel:+18324963061">Call (832) 496-3061</a></div>
+  </div>
+  <div class="map"><iframe title="Map to Clippers Barbershop" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=9901+Spencer+Hwy+Ste+F,+La+Porte,+TX+77571&z=15&output=embed"></iframe></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="mono"><div><small>Owner</small><b>Francisca<br>Regalado Leyva</b><small>Clippers Barbershop</small></div></div>
+  <div>
+    <p class="label">About</p>
+    <h2>Meet the owner</h2>
+    <p>Clippers Barbershop is owned by Francisca Regalado Leyva, a Texas-licensed Class A barber and cosmetology operator.</p>
+    <div class="lic"><span>Class A Barber · TDLR #2192341</span><span>Cosmetology Operator · TDLR #1447111</span><span>Shop license · TDLR #869618</span></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <p class="label">Contact</p>
+    <h2>Call the shop</h2>
+    <p class="intro">Questions or want to come in? Give us a call.</p>
+  </div>
+  <div class="cbox">
+    <a class="cline" href="tel:+18324963061"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><span><small>Phone</small><b>(832) 496-3061</b></span></a>
+    <a class="cline" href="https://www.google.com/maps/search/?api=1&query=9901+Spencer+Hwy+Ste+F+La+Porte+TX+77571" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Address</small><b>9901 Spencer Hwy, Ste F, La Porte, TX 77571</b></span></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap foot">
+  <b>CLIPPERS BARBERSHOP</b>
+  <span><a href="tel:+18324963061" style="text-decoration:none">(832) 496-3061</a> · 9901 Spencer Hwy, Ste F, La Porte, TX · © 2026</span>
+</div></footer>
+</body>
+</html>
