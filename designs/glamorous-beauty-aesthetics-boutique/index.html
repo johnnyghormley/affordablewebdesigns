@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Glamorous Beauty Aesthetics &amp; Boutique | Pasadena, TX</title>
+<meta name="description" content="Glamorous Beauty Aesthetics &amp; Boutique, inside MY SALON Suite, 4557 E Sam Houston Pkwy S, Pasadena, TX 77505. Call (409) 225-1328.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* THEME */
+  :root {
+    --plum: #3B1F2B; --plum2: #57304A; --blush: #F4DCD6; --blush2: #EBC3BA; --rose: #B85C6E; --rose2: #9E4559;
+    --gold: #C7A36A; --gold2: #E3CC9E; --cream: #FDF7F3; --muted: #7A6168; --line: #EED9D2;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: Jost, system-ui, sans-serif; color: var(--plum); background: var(--cream); line-height: 1.65; overflow-x: hidden; }
+  h1, h2, h3 { margin: 0 0 .4em; line-height: 1.05; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; }
+  h2 { font-size: clamp(36px, 4.6vw, 56px); }
+  h2 em, h1 em { font-style: italic; color: var(--rose); }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .label { font-size: 13px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--rose); margin: 0 0 10px; display: flex; align-items: center; gap: 12px; }
+  .label::before { content: ""; width: 28px; height: 1px; background: var(--gold); flex: none; }
+
+  .preview { background: #111; color: #EEE; font-size: 13px; text-align: center; padding: 7px 12px; }
+  .preview b { color: #FACC15; } .preview a { color: #FACC15; font-weight: 700; }
+
+  header { position: sticky; top: 0; z-index: 20; background: rgba(253,247,243,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 76px; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+  .logo .name { display: grid; line-height: 1; }
+  .logo .name b { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 30px; letter-spacing: .02em; }
+  .logo .name small { font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--rose); font-weight: 600; margin-top: 4px; }
+  nav { display: flex; gap: 26px; font-weight: 500; font-size: 15px; }
+  nav a { text-decoration: none; color: var(--muted); } nav a:hover { color: var(--plum); }
+  .call { display: inline-flex; align-items: center; gap: 8px; background: var(--plum); color: #fff; font-weight: 600; text-decoration: none; padding: 12px 20px; border-radius: 999px; white-space: nowrap; letter-spacing: .02em; }
+  .call:hover { background: var(--plum2); }
+  .call.rose { background: var(--rose); box-shadow: 0 10px 24px rgba(184,92,110,.28); } .call.rose:hover { background: var(--rose2); }
+
+  .hero { position: relative; overflow: hidden; background: linear-gradient(160deg, var(--blush) 0%, var(--cream) 62%); }
+  .hero::before { content: ""; position: absolute; width: 640px; height: 640px; right: -160px; top: -200px; border-radius: 50%; background: radial-gradient(circle, rgba(199,163,106,.28), transparent 65%); }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: center; padding-top: 84px; padding-bottom: 96px; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.7); border: 1px solid var(--line); padding: 7px 16px; border-radius: 999px; font-size: 14px; color: var(--muted); margin-bottom: 22px; }
+  .hero h1 { font-size: clamp(50px, 7.4vw, 92px); letter-spacing: -.01em; }
+  .hero p { font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 0 32px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .ghost { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; border-radius: 999px; border: 1.5px solid var(--plum); color: var(--plum); text-decoration: none; font-weight: 600; }
+  .ghost:hover { background: var(--plum); color: #fff; }
+  .art { justify-self: center; width: min(380px, 84vw); }
+
+  section { padding: 90px 0; }
+  .intro { max-width: 620px; color: var(--muted); font-size: 17px; margin: 0; }
+
+  .svc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 40px; }
+  .s { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; transition: transform .2s, box-shadow .2s; }
+  .s:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(59,31,43,.08); }
+  .s .ic { width: 54px; height: 54px; border-radius: 50%; background: var(--blush); color: var(--rose2); display: grid; place-items: center; margin-bottom: 18px; }
+  .s h3 { font-size: 27px; }
+  .s p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .note { margin-top: 20px; font-size: 14px; color: var(--muted); font-style: italic; }
+
+  .why { background: var(--plum); color: #fff; position: relative; overflow: hidden; }
+  .why h2 { color: #fff; } .why h2 em { color: var(--gold2); } .why .label { color: var(--gold2); }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+  .fact { border: 1px solid rgba(227,204,158,.3); border-radius: 22px; padding: 28px; background: rgba(255,255,255,.04); }
+  .fact .n { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 40px; color: var(--gold); line-height: 1; }
+  .fact h3 { font-size: 26px; margin-top: 10px; color: #fff; }
+  .fact p { margin: 0; color: #DCC8CF; }
+
+  .visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: stretch; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 32px; }
+  .addr { font-size: 20px; font-weight: 600; margin: 6px 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 22px; }
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 11px 0; border-bottom: 1px solid var(--line); }
+  td:last-child { text-align: right; color: var(--muted); }
+  td:first-child { font-weight: 600; }
+  .map { border-radius: 24px; overflow: hidden; border: 1px solid var(--line); min-height: 400px; background: var(--blush); }
+  .map iframe { width: 100%; height: 100%; min-height: 400px; border: 0; display: block; }
+
+  .about { background: var(--blush); }
+  .about .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: 56px; align-items: center; }
+  .mono { aspect-ratio: 4/5; max-width: 330px; width: 100%; justify-self: center; border-radius: 200px 200px 24px 24px; background: linear-gradient(180deg, #fff, var(--cream)); border: 1px solid var(--blush2); display: grid; place-items: center; text-align: center; padding: 30px; position: relative; }
+  .mono::after { content: ""; position: absolute; inset: 12px; border-radius: 190px 190px 16px 16px; border: 1px solid var(--gold); pointer-events: none; }
+  .mono small { color: var(--rose); letter-spacing: .3em; text-transform: uppercase; font-size: 12px; font-weight: 600; }
+  .mono b { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 44px; display: block; line-height: 1.05; margin: 10px 0; }
+  .about p { color: var(--muted); font-size: 17px; }
+  .lic { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .lic span { background: #fff; border: 1px solid var(--blush2); border-radius: 999px; padding: 7px 15px; font-size: 14px; }
+
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .cbox { display: grid; gap: 12px; }
+  .cline { display: flex; gap: 16px; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; text-decoration: none; }
+  .cline:hover { border-color: var(--rose); }
+  .cline .ic { width: 48px; height: 48px; border-radius: 50%; background: var(--rose); color: #fff; display: grid; place-items: center; flex: none; }
+  .cline small { display: block; color: var(--muted); font-size: 13px; } .cline b { font-size: 18px; font-weight: 600; }
+
+  footer { background: var(--plum); color: #CDB5BD; padding: 28px 0; font-size: 14px; }
+  .foot { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .foot b { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 24px; color: #fff; }
+
+  @media (max-width: 960px) { .svc { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 900px) {
+    nav { display: none; }
+    .hero .wrap, .visit .wrap, .about .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .art { width: 230px; order: -1; justify-self: start; }
+    .facts { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+    .hero .wrap { padding-top: 40px; padding-bottom: 64px; gap: 22px; }
+    .mono { max-width: 260px; justify-self: start; }
+  }
+  @media (max-width: 560px) { .svc { grid-template-columns: 1fr; } }
+  @media (max-width: 440px) {
+    .call .num { display: none; }
+    .logo .name b { font-size: 25px; } .logo .name small { font-size: 9px; letter-spacing: .22em; }
+    .logo svg { width: 34px; height: 34px; }
+    .hero p { font-size: 17px; }
+    .card { padding: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="preview"><b>Free design preview</b> for Glamorous Beauty Aesthetics &amp; Boutique by Affordable Web Designs · Like it? <a href="tel:+18325080059">Call Johnny 832-508-0059</a></div>
+
+<header><div class="wrap head">
+  <a class="logo" href="#top" aria-label="Glamorous Beauty Aesthetics and Boutique home">
+    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#C7A36A" stroke-width="1.2"/><text x="20" y="27" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-weight="600" font-size="22" fill="#B85C6E">G</text></svg>
+    <span class="name"><b>Glamorous Beauty</b><small>Aesthetics &amp; Boutique</small></span>
+  </a>
+  <nav><a href="#services">Services</a><a href="#visit">Visit</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <a class="call" href="tel:+14092251328"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="num">(409) 225-1328</span><span>Call</span></a>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>MY SALON Suite · Pasadena, TX</span>
+    <h1>Skin care with a <em>little glamour.</em></h1>
+    <p>A private esthetics suite and boutique in Pasadena, run by licensed esthetician Maritza Kirby. Call to book your visit.</p>
+    <div class="btns">
+      <a class="call rose" href="tel:+14092251328">Book: (409) 225-1328</a>
+      <a class="ghost" href="https://www.google.com/maps/search/?api=1&query=4557+E+Sam+Houston+Pkwy+S+Pasadena+TX+77505" target="_blank" rel="noopener">Visit us</a>
+    </div>
+  </div>
+  <svg class="art" viewBox="0 0 380 420" role="img" aria-label="Glamorous Beauty emblem">
+    <defs>
+      <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4DCD6"/><stop offset="1" stop-color="#EBC3BA"/></linearGradient>
+      <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3CC9E"/><stop offset="1" stop-color="#C7A36A"/></linearGradient>
+    </defs>
+    <path d="M30 420 V190 a160 160 0 0 1 320 0 V420z" fill="url(#g1)"/>
+    <path d="M46 420 V192 a144 144 0 0 1 288 0 V420" fill="none" stroke="url(#g2)" stroke-width="1.5"/>
+    <g transform="translate(190 220)">
+      <g fill="#fff" stroke="#B85C6E" stroke-width="1.3" stroke-opacity=".5">
+        <ellipse cy="-44" rx="27" ry="44"/><ellipse cy="-44" rx="27" ry="44" transform="rotate(60)"/><ellipse cy="-44" rx="27" ry="44" transform="rotate(120)"/><ellipse cy="-44" rx="27" ry="44" transform="rotate(180)"/><ellipse cy="-44" rx="27" ry="44" transform="rotate(240)"/><ellipse cy="-44" rx="27" ry="44" transform="rotate(300)"/>
+      </g>
+      <circle r="22" fill="url(#g2)"/>
+      <text y="9" text-anchor="middle" font-family="Cormorant Garamond, serif" font-style="italic" font-weight="600" font-size="28" fill="#3B1F2B">G</text>
+    </g>
+    <g fill="#C7A36A"><path d="M84 110 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/><path d="M300 330 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z"/><path d="M296 120 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z"/></g>
+    <text x="190" y="370" text-anchor="middle" font-family="Jost, sans-serif" font-weight="600" font-size="13" letter-spacing="5" fill="#57304A">PASADENA · TEXAS</text>
+  </svg>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <p class="label">Services</p>
+  <h2>Treat <em>yourself</em></h2>
+  <p class="intro">Esthetics services from a state-licensed esthetician, plus a boutique to shop while you're here.</p>
+  <div class="svc">
+    <div class="s"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3c-4 0-7 3.4-7 8 0 5 3.5 10 7 10s7-5 7-10c0-4.6-3-8-7-8z"/><path d="M9 11h.01M15 11h.01M9.5 15.5c1.5 1 3.5 1 5 0"/></svg></div><h3>Facials</h3><p>Skin care treatments tailored to your skin.</p></div>
+    <div class="s"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 18c3-7 13-7 16 0"/><path d="M7 14l-1-3M12 12V9M17 14l1-3"/></svg></div><h3>Brows &amp; lashes</h3><p>Shaping and finishing touches that frame the face.</p></div>
+    <div class="s"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 19l10-10M13 5l6 6-4 4-6-6z"/><path d="M4 20l1-1"/></svg></div><h3>Waxing</h3><p>Smooth, clean hair removal in a private suite.</p></div>
+    <div class="s"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 8h12l-1 12H7z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>Boutique</h3><p>Shop the boutique on your visit. Ask what's new.</p></div>
+  </div>
+  <p class="note">Your full service menu and prices go here, exactly the way you offer them.</p>
+</div></section>
+
+<section class="why"><div class="wrap">
+  <p class="label">Why Glamorous Beauty</p>
+  <h2>Personal, private, <em>licensed.</em></h2>
+  <div class="facts">
+    <div class="fact"><div class="n">01</div><h3>Licensed esthetician</h3><p>Owner Maritza Kirby holds a Texas esthetician license from TDLR.</p></div>
+    <div class="fact"><div class="n">02</div><h3>State-licensed suite</h3><p>Licensed by the Texas Department of Licensing and Regulation, license #865942.</p></div>
+    <div class="fact"><div class="n">03</div><h3>Owner-operated</h3><p>One-on-one service from the owner in her own private suite.</p></div>
+  </div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+  <div class="card">
+    <p class="label">Visit</p>
+    <h2>Find the <em>suite</em></h2>
+    <div class="addr">4557 E Sam Houston Pkwy S<br>Pasadena, TX 77505</div>
+    <p class="sub">Inside MY SALON Suite</p>
+    <table aria-label="Hours">
+      <tr><td>Monday</td><td>&nbsp;</td></tr>
+      <tr><td>Tuesday</td><td>&nbsp;</td></tr>
+      <tr><td>Wednesday</td><td>&nbsp;</td></tr>
+      <tr><td>Thursday</td><td>&nbsp;</td></tr>
+      <tr><td>Friday</td><td>&nbsp;</td></tr>
+      <tr><td>Saturday</td><td>&nbsp;</td></tr>
+      <tr><td>Sunday</td><td>&nbsp;</td></tr>
+    </table>
+    <div class="btns" style="margin-top:24px"><a class="call rose" href="tel:+14092251328">Call (409) 225-1328</a></div>
+  </div>
+  <div class="map"><iframe title="Map to Glamorous Beauty Aesthetics and Boutique" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=4557+E+Sam+Houston+Pkwy+S,+Pasadena,+TX+77505&z=15&output=embed"></iframe></div>
+</div></section>
+
+<section class="about" id="about"><div class="wrap">
+  <div class="mono"><div><small>Owner</small><b>Maritza<br>Kirby</b><small>Licensed Esthetician</small></div></div>
+  <div>
+    <p class="label">About</p>
+    <h2>Meet <em>Maritza</em></h2>
+    <p>Glamorous Beauty Aesthetics &amp; Boutique is owned by Maritza Kirby, a Texas-licensed esthetician. She opened her suite at MY SALON Suite in Pasadena in 2024, pairing esthetics services with a boutique.</p>
+    <div class="lic"><span>Esthetician · TDLR #1725415</span><span>Suite license · TDLR #865942</span></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div>
+    <p class="label">Contact</p>
+    <h2>Book your <em>visit</em></h2>
+    <p class="intro">Questions or ready to book? Give Maritza a call.</p>
+  </div>
+  <div class="cbox">
+    <a class="cline" href="tel:+14092251328"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><span><small>Phone</small><b>(409) 225-1328</b></span></a>
+    <a class="cline" href="https://www.google.com/maps/search/?api=1&query=4557+E+Sam+Houston+Pkwy+S+Pasadena+TX+77505" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Address</small><b>4557 E Sam Houston Pkwy S, Pasadena, TX 77505</b></span></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap foot">
+  <b>Glamorous Beauty Aesthetics &amp; Boutique</b>
+  <span><a href="tel:+14092251328" style="text-decoration:none">(409) 225-1328</a> · 4557 E Sam Houston Pkwy S, Pasadena, TX · © 2026</span>
+</div></footer>
+</body>
+</html>
