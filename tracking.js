@@ -45,5 +45,30 @@
     if (!a) return;
     if (window.fbq) fbq('track', 'Contact');
     if (window.gtag && GA4_ID) gtag('event', 'click_to_call');
+    awdLogVisit('call');
   });
+
+  // AWD's own visit counter (2026-11-10): one row per page view (and per phone tap) in the CRM's site_visits table,
+  // shown on the CRM's admin-only Analytics tab. No names, emails or IP addresses: just the page, where the visitor
+  // came from, a random id kept in this browser, and phone vs computer. The public key can only ADD a row.
+  function awdLogVisit(event) {
+    try {
+      if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) || navigator.webdriver) return;
+      var vid = '';
+      try { vid = localStorage.getItem('awd_vid') || ''; if (!vid) { vid = Math.random().toString(36).slice(2) + Date.now().toString(36); localStorage.setItem('awd_vid', vid); } } catch (e) {}
+      var q = new URLSearchParams(location.search), us = q.get('utm_source'), um = q.get('utm_medium') || '';
+      var source = q.get('src') || (q.get('gclid') ? 'googlead' : '') || (q.get('fbclid') && !us ? 'facebook' : '') || (us ? us + (um ? '/' + um : '') : '');
+      var ref = '';
+      try { if (document.referrer) { var r = new URL(document.referrer); if (r.hostname !== location.hostname) ref = r.hostname; } } catch (e) {}
+      var row = { path: location.pathname.slice(0, 300), referrer: ref.slice(0, 300), source: source.slice(0, 100) || null, visitor_id: vid.slice(0, 64) || null,
+                  device: /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? 'phone' : 'computer', event: event || 'view' };
+      fetch('https://mrklhkseyynmnjzbiokx.supabase.co/rest/v1/site_visits', {
+        method: 'POST', keepalive: true,
+        headers: { apikey: AWD_PUBLIC_KEY, Authorization: 'Bearer ' + AWD_PUBLIC_KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+        body: JSON.stringify(row)
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  var AWD_PUBLIC_KEY = 'sb_publishable_8SekgbrdzwUzWaMCohwznQ_wPZaOpDo'; // the same public key the form uses; it can only add rows
+  awdLogVisit('view');
 })();
