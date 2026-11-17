@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Little Hands on Learning Home Center | Licensed Home Daycare in Baytown, TX</title>
+<meta name="description" content="Little Hands on Learning Home Center is a Texas-licensed child-care home in Baytown for infants through school age. Hands-on learning, meals and snacks, open Monday to Friday, 7 AM to 5 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800;900&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #232B36; --ink2: #3E4A59; --muted: #5F6B7A;
+    --paper: #FFFCF5; --paper2: #F7F1E4; --line: #EBE2CF;
+    --tomato: #C93D26; --tomato-l: #F06A4E; --cobalt: #2B62C9; --leaf: #23884A; --sun: #FFC22E; --pink: #E25C97; --sky: #DCEBFF; --mint: #DDF3E3; --butter: #FFF1C7; --blush: #FDE3EC;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Mulish", system-ui, sans-serif; color: var(--ink); line-height: 1.65; background: var(--paper); font-size: 17px; }
+  h1, h2, h3 { font-family: "Grandstander", "Mulish", sans-serif; line-height: 1.1; margin: 0 0 .45em; color: var(--ink); letter-spacing: -.01em; }
+  a { color: inherit; }
+  svg { max-width: 100%; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+  .preview { background: var(--ink); color: #fff; font-size: 13px; text-align: center; padding: 7px 12px; }
+  .preview b { color: var(--sun); } .preview a { color: var(--sun); font-weight: 800; }
+
+  header { position: sticky; top: 0; z-index: 20; background: rgba(255,252,245,.95); backdrop-filter: blur(8px); border-bottom: 2px dashed var(--line); }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 14px; height: 76px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); min-width: 0; }
+  .logo svg { flex: none; }
+  .logo .nm { font-family: "Grandstander"; font-weight: 900; font-size: 22px; line-height: 1; }
+  .logo .nm span:nth-child(1) { color: var(--tomato); } .logo .nm span:nth-child(2) { color: var(--cobalt); }
+  .logo small { display: block; font-weight: 800; font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  nav { display: flex; gap: 22px; font-weight: 800; font-size: 15px; }
+  nav a { text-decoration: none; color: var(--ink2); }
+  nav a:hover { color: var(--tomato); }
+  .call { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--tomato); color: #fff; font-weight: 800; text-decoration: none; padding: 13px 20px; border-radius: 18px 22px 16px 24px; white-space: nowrap; box-shadow: 0 4px 0 #8E2817; transition: transform .15s; }
+  .call:hover { transform: translateY(-2px) rotate(-1deg); }
+  .ghost { display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border-radius: 22px 16px 24px 18px; border: 3px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 800; background: #fff; }
+  .ghost:hover { background: var(--ink); color: #fff; }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; padding: 60px 0 70px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: center; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; background: var(--mint); color: #17603A; padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 800; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(40px, 6.2vw, 72px); font-weight: 900; }
+  .hero h1 .c1 { color: var(--tomato); } .hero h1 .c2 { color: var(--cobalt); }
+  .scrib { position: relative; display: inline-block; }
+  .scrib svg { position: absolute; left: -2%; bottom: -14px; width: 104%; height: 18px; }
+  .hero .lead { font-size: 19px; color: var(--ink2); max-width: 540px; margin: 18px 0 28px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; padding: 0; list-style: none; }
+  .facts li { display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 8px 14px; font-weight: 800; font-size: 15px; }
+  .facts i { width: 12px; height: 12px; border-radius: 50% 40% 55% 45%; display: inline-block; }
+  .art { position: relative; }
+  .art svg { display: block; width: 100%; height: auto; }
+
+  /* crayon stripe */
+  .crayons { display: flex; height: 14px; }
+  .crayons span { flex: 1; }
+
+  section { padding: 84px 0; }
+  .eyebrow { font-family: "Grandstander"; font-weight: 800; font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--tomato); margin-bottom: 8px; display: inline-flex; gap: 8px; align-items: center; }
+  h2 { font-size: clamp(32px, 4.4vw, 48px); font-weight: 900; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 640px; margin: 0 0 40px; }
+  .center { text-align: center; } .center .sub { margin-left: auto; margin-right: auto; }
+
+  /* quote band */
+  .quote { background: var(--ink); color: #fff; padding: 56px 0; position: relative; overflow: hidden; }
+  .quote blockquote { margin: 0 auto; max-width: 860px; text-align: center; font-family: "Grandstander"; font-weight: 800; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.25; position: relative; z-index: 1; }
+  .quote blockquote em { font-style: normal; color: var(--sun); }
+  .quote p { text-align: center; color: #C9D1DC; margin: 16px 0 0; font-weight: 700; position: relative; z-index: 1; }
+  .quote .splat { position: absolute; opacity: .9; }
+
+  /* learning grid */
+  .learn { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .lcard { background: #fff; border: 2.5px solid var(--ink); border-radius: 20px 26px 18px 24px; padding: 22px 20px 20px; box-shadow: 5px 5px 0 var(--c, var(--sun)); transition: transform .15s; }
+  .lcard:nth-child(even) { border-radius: 26px 18px 24px 20px; }
+  .lcard:hover { transform: translate(-2px,-2px) rotate(-.6deg); }
+  .lcard .ic { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: var(--bg, var(--butter)); margin-bottom: 14px; }
+  .lcard h3 { font-size: 21px; margin-bottom: 6px; }
+  .lcard p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  /* ages */
+  .ages-sec { background: var(--paper2); }
+  .ages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .age { border-radius: 24px; padding: 26px 22px; text-align: center; position: relative; }
+  .age svg { width: 74px; height: 74px; margin: 0 auto 10px; display: block; }
+  .age h3 { font-size: 24px; margin-bottom: 4px; }
+  .age p { margin: 0; font-size: 15.5px; color: var(--ink2); }
+  .prog { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 36px; }
+  .prog span { background: #fff; border: 2px solid var(--line); border-radius: 999px; padding: 10px 18px; font-weight: 800; display: inline-flex; gap: 9px; align-items: center; }
+
+  /* why */
+  .why-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 50px; align-items: start; }
+  .why-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+  .why-list li { display: grid; grid-template-columns: 46px 1fr; gap: 14px; align-items: start; background: #fff; border: 2px solid var(--line); border-radius: 18px; padding: 16px 18px; }
+  .why-list svg { display: block; }
+  .why-list b { display: block; font-family: "Grandstander"; font-size: 19px; font-weight: 800; line-height: 1.25; margin-bottom: 2px; }
+  .why-list span { color: var(--muted); font-size: 15.5px; }
+  .license { background: #fff; border: 3px dashed var(--cobalt); border-radius: 22px; padding: 26px; margin-top: 26px; position: relative; }
+  .license h3 { font-size: 22px; margin-bottom: 10px; color: var(--cobalt); }
+  .license dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 15.5px; }
+  .license dt { color: var(--muted); font-weight: 700; } .license dd { margin: 0; font-weight: 800; }
+  .license small { display: block; margin-top: 12px; color: var(--muted); font-size: 13.5px; }
+
+  /* steps */
+  .steps-sec { background: var(--sky); }
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: s; }
+  .step { background: #fff; border-radius: 22px; padding: 28px 24px; position: relative; }
+  .step .n { width: 54px; height: 54px; display: grid; place-items: center; font-family: "Grandstander"; font-weight: 900; font-size: 26px; color: #fff; border-radius: 48% 52% 44% 56%; margin-bottom: 14px; }
+  .step h3 { font-size: 22px; margin-bottom: 6px; }
+  .step p { margin: 0; color: var(--muted); }
+
+  /* hours */
+  .hrs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .week { background: #fff; border: 2.5px solid var(--ink); border-radius: 24px; padding: 10px 24px; box-shadow: 6px 6px 0 var(--leaf); }
+  .week div { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 2px dashed var(--line); font-weight: 700; }
+  .week div:last-child { border-bottom: 0; }
+  .week b { font-weight: 800; }
+  .week .off { color: var(--muted); }
+  .area { display: flex; gap: 14px; align-items: flex-start; margin-top: 22px; background: var(--butter); padding: 18px 20px; border-radius: 18px; }
+
+  /* about */
+  .about-sec { background: var(--paper2); }
+  .about { display: grid; grid-template-columns: 300px 1fr; gap: 50px; align-items: center; }
+  .about .badge svg { width: 100%; height: auto; display: block; }
+  .about p { color: var(--ink2); font-size: 17.5px; }
+  .about .pull { font-family: "Grandstander"; font-weight: 800; font-size: 22px; color: var(--cobalt); border-left: 6px solid var(--sun); padding-left: 16px; margin: 20px 0; line-height: 1.35; }
+
+  /* contact */
+  .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: 40px; }
+  .cline { display: flex; gap: 14px; align-items: center; text-decoration: none; background: #fff; border: 2px solid var(--line); border-radius: 18px; padding: 14px 18px; margin-bottom: 12px; }
+  .cline .ci { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; color: #fff; flex: none; }
+  .cline small { display: block; color: var(--muted); font-weight: 700; font-size: 13px; }
+  .cline b { font-size: 17px; word-break: break-word; }
+  form { background: #fff; border: 2.5px solid var(--ink); border-radius: 24px; padding: 26px; box-shadow: 6px 6px 0 var(--pink); }
+  form h3 { font-size: 24px; }
+  label { display: block; font-weight: 800; font-size: 14px; margin: 12px 0 5px; }
+  input, select, textarea { width: 100%; font: inherit; font-size: 16px; padding: 12px 14px; border: 2px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--ink); }
+  input:focus, select:focus, textarea:focus { outline: 3px solid var(--sun); border-color: var(--ink); }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  form button { margin-top: 18px; width: 100%; border: 0; cursor: pointer; font: inherit; font-size: 17px; }
+  form small { display: block; color: var(--muted); margin-top: 10px; font-size: 13.5px; text-align: center; }
+
+  footer { background: var(--ink); color: #C9D1DC; padding: 40px 0 46px; font-size: 15px; }
+  .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
+  footer .nm { font-family: "Grandstander"; font-weight: 900; font-size: 22px; color: #fff; }
+  footer a { color: var(--sun); text-decoration: none; font-weight: 700; }
+
+  @media (max-width: 980px) {
+    nav { display: none; }
+    .hero-grid, .why-grid, .hrs-grid, .contact { grid-template-columns: 1fr; }
+    .art { max-width: 520px; margin: 0 auto; }
+    .learn, .ages { grid-template-columns: repeat(2, 1fr); }
+    .about { grid-template-columns: 1fr; text-align: left; }
+    .about .badge { max-width: 240px; }
+  }
+  @media (max-width: 620px) {
+    body { font-size: 16px; }
+    section { padding: 60px 0; }
+    .head { height: 66px; }
+    .logo .nm { font-size: 18px; } .logo small { font-size: 10px; letter-spacing: .1em; }
+    .logo svg { width: 38px; height: 38px; }
+    .head .call { padding: 11px 14px; }
+    .head .call .lbl { display: none; }
+    .hero { padding: 40px 0 50px; }
+    .hero .lead { font-size: 17.5px; }
+    .btns a { flex: 1 1 100%; }
+    .learn { grid-template-columns: 1fr; }
+    .ages { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .age { padding: 20px 12px; } .age svg { width: 58px; height: 58px; } .age h3 { font-size: 20px; } .age p { font-size: 14px; }
+    .steps { grid-template-columns: 1fr; }
+    .row2 { grid-template-columns: 1fr; }
+    .license dl { grid-template-columns: 1fr; gap: 0 0; } .license dd { margin-bottom: 8px; }
+  }
+  @media (min-width: 621px) { .head .call .short { display: none; } }
+  @media (max-width: 620px) { .head .call .short { display: inline; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="hand" viewBox="-60 -80 120 140">
+      <ellipse cx="0" cy="18" rx="33" ry="36"/>
+      <rect x="-8" y="-62" width="16" height="52" rx="8" transform="rotate(-4 0 -10)"/>
+      <rect x="-8" y="-62" width="16" height="48" rx="8" transform="rotate(-20 0 4) translate(-2 4)"/>
+      <rect x="-8" y="-58" width="16" height="48" rx="8" transform="rotate(14 0 4) translate(2 6)"/>
+      <rect x="-7" y="-50" width="14" height="40" rx="7" transform="rotate(30 0 10) translate(6 12)"/>
+      <rect x="-8" y="-40" width="16" height="42" rx="8" transform="rotate(-58 0 22) translate(-4 18)"/>
+    </symbol>
+    <symbol id="splat" viewBox="0 0 100 100">
+      <path d="M50 8c6 0 7 12 13 13s12-9 17-4-4 13 0 18 15 2 15 9-11 7-12 13 9 12 4 17-13-3-18 1-3 17-11 17-7-12-13-13-12 9-17 4 4-13 0-18-15-2-15-9 11-7 12-13-9-12-4-17 13 3 18-1 3-17 11-17z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="preview"><b>Free design preview</b> for Little Hands on Learning Home Center by Affordable Web Designs · Like it? Call Johnny <a href="tel:8325080059">832-508-0059</a></div>
+
+<header>
+  <div class="wrap head">
+    <a class="logo" href="#top" aria-label="Little Hands on Learning Home Center, home">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <use href="#splat" x="0" y="0" width="46" height="46" fill="#FFC22E"/>
+        <use href="#hand" x="8" y="6" width="30" height="34" fill="#C93D26" transform="rotate(-8 23 23)"/>
+      </svg>
+      <span><span class="nm"><span>Little Hands</span> <span>on Learning</span></span><small>Home Center · Baytown, TX</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#learning">Learning</a><a href="#ages">Ages</a><a href="#why">Why us</a><a href="#hours">Hours</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:3466600968" aria-label="Call (346) 660-0968">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+      <span class="lbl">(346) 660-0968</span><span class="short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Texas-licensed child-care home in Baytown
+      </span>
+      <h1><span class="c1">Little hands.</span><br><span class="scrib"><span class="c2">Big</span> learning.<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M4 12c40-8 80-9 120-5s70 6 110 0 50-4 62-2" fill="none" stroke="#FFC22E" stroke-width="7" stroke-linecap="round"/></svg></span></h1>
+      <p class="lead">Safe, loving, hands-on child care in a small home setting, where infants through school-age kids learn through art, music, play and outdoor exploration, at their own pace.</p>
+      <div class="btns">
+        <a class="call" href="tel:3466600968">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          Call (346) 660-0968
+        </a>
+        <a class="ghost" href="#contact">Schedule a visit</a>
+      </div>
+      <ul class="facts">
+        <li><i style="background:var(--tomato-l)"></i>Infants to school age</li>
+        <li><i style="background:var(--cobalt)"></i>Mon–Fri · 7 AM–5 PM</li>
+        <li><i style="background:var(--leaf)"></i>Meals &amp; snacks</li>
+        <li><i style="background:var(--sun)"></i>Subsidies accepted</li>
+      </ul>
+    </div>
+
+    <div class="art" aria-hidden="true">
+      <svg viewBox="0 0 520 470">
+        <!-- paper sheet -->
+        <g transform="rotate(-3 260 235)">
+          <rect x="40" y="40" width="440" height="380" rx="18" fill="#fff" stroke="#232B36" stroke-width="4"/>
+          <rect x="40" y="40" width="440" height="380" rx="18" fill="none" stroke="#EBE2CF" stroke-width="2" stroke-dasharray="2 10" transform="translate(10 10) scale(.96)"/>
+          <!-- tape -->
+          <rect x="220" y="24" width="90" height="30" rx="4" fill="#FFC22E" opacity=".75" transform="rotate(4 265 39)"/>
+          <!-- sun -->
+          <circle cx="410" cy="110" r="34" fill="#FFC22E"/>
+          <g stroke="#FFC22E" stroke-width="7" stroke-linecap="round">
+            <path d="M410 56v-12M410 176v-12M356 110h-12M476 110h-12M372 72l-8-8M456 156l-8-8M448 72l8-8M364 156l8-8"/>
+          </g>
+          <!-- rainbow arc scribble -->
+          <path d="M90 300a150 150 0 0 1 300 0" fill="none" stroke="#E25C97" stroke-width="12" stroke-linecap="round" opacity=".35"/>
+          <path d="M112 300a128 128 0 0 1 256 0" fill="none" stroke="#2B62C9" stroke-width="12" stroke-linecap="round" opacity=".3"/>
+          <!-- handprints -->
+          <use href="#hand" x="80" y="150" width="110" height="128" fill="#F06A4E" transform="rotate(-18 135 214)"/>
+          <use href="#hand" x="185" y="110" width="118" height="138" fill="#2B62C9" transform="rotate(-3 244 179)"/>
+          <use href="#hand" x="292" y="160" width="104" height="122" fill="#23884A" transform="rotate(16 344 221)"/>
+          <use href="#hand" x="140" y="262" width="84" height="98" fill="#FFC22E" transform="rotate(-10 182 311)"/>
+          <use href="#hand" x="246" y="270" width="80" height="94" fill="#E25C97" transform="rotate(12 286 317)"/>
+          <!-- crayon name scribble -->
+          <path d="M96 392c14-10 22 8 34-2s18 6 30-2 20 6 32-2" fill="none" stroke="#232B36" stroke-width="4" stroke-linecap="round"/>
+          <!-- dots -->
+          <circle cx="100" cy="90" r="9" fill="#2B62C9"/><circle cx="130" cy="74" r="5" fill="#E25C97"/><circle cx="440" cy="380" r="8" fill="#23884A"/>
+        </g>
+        <!-- crayons -->
+        <g transform="translate(372 392) rotate(-30)">
+          <rect x="0" y="0" width="120" height="22" rx="5" fill="#C93D26"/><path d="M120 0l26 11-26 11z" fill="#C93D26"/><rect x="18" y="0" width="10" height="22" fill="#8E2817"/><rect x="90" y="0" width="10" height="22" fill="#8E2817"/>
+        </g>
+        <g transform="translate(14 396) rotate(-12)">
+          <rect x="0" y="0" width="110" height="22" rx="5" fill="#2B62C9"/><path d="M110 0l26 11-26 11z" fill="#2B62C9"/><rect x="16" y="0" width="10" height="22" fill="#1B428D"/><rect x="82" y="0" width="10" height="22" fill="#1B428D"/>
+        </g>
+        <!-- paint splats -->
+        <use href="#splat" x="0" y="20" width="62" height="62" fill="#23884A" opacity=".9"/>
+        <use href="#splat" x="466" y="230" width="48" height="48" fill="#E25C97"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="crayons" aria-hidden="true"><span style="background:#C93D26"></span><span style="background:#F06A4E"></span><span style="background:#FFC22E"></span><span style="background:#23884A"></span><span style="background:#2B62C9"></span><span style="background:#E25C97"></span></div>
+
+<section id="learning">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">A hands-on day</div>
+      <h2>Learning they can touch, hear and explore</h2>
+      <p class="sub">Every day mixes guided learning with plenty of play. Here's what little hands get into.</p>
+    </div>
+    <div class="learn">
+      <div class="lcard" style="--c:var(--tomato-l);--bg:var(--blush)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C93D26" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a10 10 0 1 1 10-10c0 2.8-2.2 3-4 3h-2a2 2 0 0 0-1.4 3.4A2 2 0 0 1 12 22z"/><circle cx="7.5" cy="10.5" r="1.3"/><circle cx="11" cy="6.8" r="1.3"/><circle cx="16" cy="8" r="1.3"/></svg></div>
+        <h3>Arts &amp; crafts</h3><p>Painting, coloring and making things with their own two hands.</p>
+      </div>
+      <div class="lcard" style="--c:var(--cobalt);--bg:var(--sky)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B62C9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>Music &amp; movement</h3><p>Songs, rhythm and body movement to get the wiggles out.</p>
+      </div>
+      <div class="lcard" style="--c:var(--sun);--bg:var(--butter)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9A6A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18h20l-3-9-5 4-2-7-2 7-5-4z"/></svg></div>
+        <h3>Dramatic play</h3><p>Pretend play that builds imagination, words and social skills.</p>
+      </div>
+      <div class="lcard" style="--c:var(--leaf);--bg:var(--mint)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#23884A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
+        <h3>Math readiness</h3><p>Hands-on manipulatives for counting, sorting and early math concepts.</p>
+      </div>
+      <div class="lcard" style="--c:var(--pink);--bg:var(--blush)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B83A72" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h7a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H2zM22 4h-7a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h8z"/></svg></div>
+        <h3>Reading for enjoyment</h3><p>Story time that makes books something kids look forward to.</p>
+      </div>
+      <div class="lcard" style="--c:var(--cobalt);--bg:var(--sky)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B62C9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"/><path d="M7.5 15h9"/></svg></div>
+        <h3>Sensory &amp; science</h3><p>Sensory play and simple experiments that spark curiosity.</p>
+      </div>
+      <div class="lcard" style="--c:var(--leaf);--bg:var(--mint)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#23884A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12"/><path d="M12 12c0-4 3-7 7-7 0 4-3 7-7 7zM12 15c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/></svg></div>
+        <h3>Outdoor exploration</h3><p>Fresh air, discovery and room to run.</p>
+      </div>
+      <div class="lcard" style="--c:var(--tomato-l);--bg:var(--butter)">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C93D26" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 0 1 0 18M3 12h18M5.6 5.6c3.5 2.8 9.3 2.8 12.8 0M5.6 18.4c3.5-2.8 9.3-2.8 12.8 0"/></svg></div>
+        <h3>Free play</h3><p>Regular free play, so kids can follow their own ideas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="quote">
+  <svg class="splat" style="left:-30px;top:-30px;width:140px;height:140px" aria-hidden="true"><use href="#splat" width="140" height="140" fill="#C93D26"/></svg>
+  <svg class="splat" style="right:-20px;bottom:-40px;width:160px;height:160px" aria-hidden="true"><use href="#splat" width="160" height="160" fill="#2B62C9"/></svg>
+  <div class="wrap">
+    <blockquote>“We are a <em>Professional Child Care Provider</em>, not a babysitter.”</blockquote>
+    <p>A clean, safe, comfortable place where children play and learn with guidance and loving care.</p>
+  </div>
+</div>
+
+<section id="ages" class="ages-sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Ages we care for</div>
+      <h2>From first steps to school days</h2>
+      <p class="sub">Licensed by the State of Texas to care for children from infancy through school age.</p>
+    </div>
+    <div class="ages">
+      <div class="age" style="background:var(--blush)">
+        <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#fff"/><circle cx="40" cy="42" r="18" fill="#F06A4E"/><circle cx="34" cy="40" r="2.5" fill="#232B36"/><circle cx="46" cy="40" r="2.5" fill="#232B36"/><path d="M35 48c3 3 7 3 10 0" stroke="#232B36" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M40 24c-3-4 2-8 5-5" stroke="#232B36" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        <h3>Infants</h3><p>Gentle, attentive care for the littlest hands</p>
+      </div>
+      <div class="age" style="background:var(--butter)">
+        <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#fff"/><rect x="20" y="40" width="18" height="18" rx="3" fill="#FFC22E"/><rect x="42" y="40" width="18" height="18" rx="3" fill="#2B62C9"/><rect x="31" y="21" width="18" height="18" rx="3" fill="#C93D26"/></svg>
+        <h3>Toddlers</h3><p>Busy explorers building words and skills</p>
+      </div>
+      <div class="age" style="background:var(--mint)">
+        <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#fff"/><text x="40" y="52" text-anchor="middle" font-family="Grandstander, sans-serif" font-weight="900" font-size="30"><tspan fill="#C93D26">A</tspan><tspan fill="#2B62C9">B</tspan><tspan fill="#23884A">C</tspan></text></svg>
+        <h3>Pre-K</h3><p>Getting ready for kindergarten through play</p>
+      </div>
+      <div class="age" style="background:var(--sky)">
+        <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#fff"/><path d="M24 30h32v28a4 4 0 0 1-4 4H28a4 4 0 0 1-4-4z" fill="#2B62C9"/><path d="M32 30v-4a8 8 0 0 1 16 0v4" stroke="#232B36" stroke-width="3" fill="none"/><rect x="30" y="40" width="20" height="9" rx="2" fill="#FFC22E"/></svg>
+        <h3>School age</h3><p>A caring place for school-age kids</p>
+      </div>
+    </div>
+    <div class="prog">
+      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C93D26" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M3 11h18M5 11a7 7 0 0 0 14 0M12 4v3"/></svg>Meals provided</span>
+      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#23884A" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="14" r="7"/><path d="M12 7c0-2 1-4 3-4"/></svg>Snacks provided</span>
+      <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2B62C9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Child-care subsidies accepted</span>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="eyebrow">Why families choose us</div>
+      <h2>Small home. Big attention.</h2>
+      <p class="sub" style="margin-bottom:0">A licensed home center means a smaller group, a familiar caregiver, and a day built around how young children really learn.</p>
+      <div class="license">
+        <h3>State licensing</h3>
+        <dl>
+          <dt>Type</dt><dd>Licensed Child-Care Home</dd>
+          <dt>Licensed by</dt><dd>Texas HHSC Child Care Regulation</dd>
+          <dt>Operation #</dt><dd>1729732</dd>
+          <dt>Permit</dt><dd>Full permit, issued April 2022</dd>
+        </dl>
+        <small>Families can look up any Texas child-care operation on the state's Search Texas Child Care site.</small>
+      </div>
+    </div>
+    <ul class="why-list">
+      <li>
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><use href="#splat" width="46" height="46" fill="#F06A4E"/><path d="M15 23l6 6 11-12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div><b>Texas-licensed child-care home</b><span>Licensed by the state since 2022, with a full permit.</span></div>
+      </li>
+      <li>
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><use href="#splat" width="46" height="46" fill="#2B62C9"/><use href="#hand" x="11" y="9" width="24" height="28" fill="#fff"/></svg>
+        <div><b>Individual attention</b><span>A small home setting, licensed for up to 12 children, so each child can learn at their own pace.</span></div>
+      </li>
+      <li>
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><use href="#splat" width="46" height="46" fill="#23884A"/><path d="M14 22h18M16 22a7 7 0 0 0 14 0" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        <div><b>Meals and snacks provided</b><span>Kids are fed through the day, so mornings are easier on parents.</span></div>
+      </li>
+      <li>
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><use href="#splat" width="46" height="46" fill="#FFC22E"/><text x="23" y="30" text-anchor="middle" font-family="Grandstander, sans-serif" font-weight="900" font-size="20" fill="#232B36">$</text></svg>
+        <div><b>Child-care subsidies accepted</b><span>Families using child-care assistance are welcome. Call to ask about your situation.</span></div>
+      </li>
+      <li>
+        <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true"><use href="#splat" width="46" height="46" fill="#E25C97"/><path d="M23 33s-9-5.5-9-11.5a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6-9 11.5-9 11.5z" fill="#fff"/></svg>
+        <div><b>Owner-operated, woman-owned</b><span>Run by Miss Darsy herself. Woman-owned and Latino-owned.</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="wrap">
+    <div class="center">
+      <div class="eyebrow">Getting started</div>
+      <h2>Enrolling is easy</h2>
+      <p class="sub">Three simple steps to see if we're the right fit for your family.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n" style="background:var(--tomato)">1</div><h3>Give us a call</h3><p>Tell us about your child's age, your schedule and when you need care to start.</p></div>
+      <div class="step"><div class="n" style="background:var(--cobalt)">2</div><h3>Come for a visit</h3><p>See the space, meet Miss Darsy, and ask every question you have.</p></div>
+      <div class="step"><div class="n" style="background:var(--leaf)">3</div><h3>Start the fun</h3><p>Finish enrollment and your little one is ready for their first hands-on day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap hrs-grid">
+    <div>
+      <div class="eyebrow">Hours &amp; location</div>
+      <h2>Open weekdays in Baytown</h2>
+      <p class="sub" style="margin-bottom:0">Full-day care that fits a working parent's schedule, Monday through Friday.</p>
+      <div class="area">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#C93D26" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <div><b>Baytown, TX (Harris County)</b><br><span style="color:var(--ink2)">A home-based center serving Baytown families. Call for directions and to set up a visit.</span></div>
+      </div>
+    </div>
+    <div class="week" aria-label="Weekly hours">
+      <div><span>Monday</span><b>7:00 AM – 5:00 PM</b></div>
+      <div><span>Tuesday</span><b>7:00 AM – 5:00 PM</b></div>
+      <div><span>Wednesday</span><b>7:00 AM – 5:00 PM</b></div>
+      <div><span>Thursday</span><b>7:00 AM – 5:00 PM</b></div>
+      <div><span>Friday</span><b>7:00 AM – 5:00 PM</b></div>
+      <div class="off"><span>Saturday &amp; Sunday</span><span>Closed</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-sec">
+  <div class="wrap about">
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <use href="#splat" x="10" y="10" width="280" height="280" fill="#FFC22E"/>
+        <circle cx="150" cy="150" r="96" fill="#fff" stroke="#232B36" stroke-width="4"/>
+        <use href="#hand" x="104" y="66" width="92" height="108" fill="#C93D26" transform="rotate(-6 150 120)"/>
+        <text x="150" y="206" text-anchor="middle" font-family="Grandstander, sans-serif" font-weight="900" font-size="24" fill="#2B62C9">Miss Darsy</text>
+      </svg>
+    </div>
+    <div>
+      <div class="eyebrow">About us</div>
+      <h2>Meet Miss Darsy</h2>
+      <p>Darsy Villacorta is the owner and director of Little Hands on Learning Home Center, a Texas-licensed child-care home in Baytown, licensed since 2022.</p>
+      <p class="pull">“In a small home environment I can give individual attention to assure children are learning at their own pace.”</p>
+      <p>Her approach is simple: a clean, safe, comfortable place where children play and learn with guidance and loving care, with a day full of art, music, stories, science and outdoor time.</p>
+      <div class="btns" style="margin-top:24px"><a class="call" href="tel:3466600968">Call Miss Darsy</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Let's talk about your little one</h2>
+      <p class="sub">Call to ask about openings or to schedule a visit. You can also send a note and Miss Darsy will get back to you.</p>
+      <a class="cline" href="tel:3466600968"><span class="ci" style="background:var(--tomato)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Call</small><b>(346) 660-0968</b></span></a>
+      <a class="cline" href="mailto:littlehandsonlearnig@gmail.com"><span class="ci" style="background:var(--cobalt)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Email</small><b>littlehandsonlearnig@gmail.com</b></span></a>
+      <div class="cline"><span class="ci" style="background:var(--leaf)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><small>Hours</small><b>Mon–Fri, 7:00 AM – 5:00 PM</b></span></div>
+      <div class="cline"><span class="ci" style="background:#B07A00"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></span><span><small>Location</small><b>Baytown, TX · call for directions</b></span></div>
+    </div>
+    <form action="mailto:littlehandsonlearnig@gmail.com" method="post" enctype="text/plain">
+      <h3>Ask about enrollment</h3>
+      <div class="row2">
+        <div><label for="n">Your name</label><input id="n" name="Name" autocomplete="name" required></div>
+        <div><label for="p">Phone</label><input id="p" name="Phone" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="row2">
+        <div><label for="a">Child's age</label>
+          <select id="a" name="Child age"><option>Infant</option><option>Toddler</option><option>Pre-K</option><option>School age</option></select></div>
+        <div><label for="s">Hoping to start</label><input id="s" name="Start date" placeholder="e.g. January"></div>
+      </div>
+      <label for="m">Anything we should know?</label>
+      <textarea id="m" name="Message" rows="4"></textarea>
+      <button class="call" type="submit">Send my note</button>
+      <small>Prefer to talk? Call <a href="tel:3466600968">(346) 660-0968</a>.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<div class="crayons" aria-hidden="true"><span style="background:#C93D26"></span><span style="background:#F06A4E"></span><span style="background:#FFC22E"></span><span style="background:#23884A"></span><span style="background:#2B62C9"></span><span style="background:#E25C97"></span></div>
+<footer>
+  <div class="wrap foot">
+    <div><div class="nm">Little Hands on Learning Home Center</div>Texas-licensed child-care home · Baytown, TX</div>
+    <div><a href="tel:3466600968">(346) 660-0968</a> · <a href="mailto:littlehandsonlearnig@gmail.com">littlehandsonlearnig@gmail.com</a><br>© 2026 Little Hands on Learning Home Center</div>
+  </div>
+</footer>
+</body>
+</html>
