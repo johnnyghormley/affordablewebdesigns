@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Baby 1-2-3 Daycare | Licensed Home Daycare in Katy, TX</title>
+<meta name="description" content="Baby 1-2-3 Daycare is a Texas-licensed child-care home in Katy for infants through school age. Open 7 AM to 6 PM, Monday through Friday. Meals and snacks provided.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #24224F; --ink2: #3B3874; --muted: #615E8A; --line: #E2DEF5;
+    --cloud: #F7F5FF; --cloud2: #EEEAFD; --white: #FFFFFF;
+    --coral: #FF6F61; --coral-d: #D9503F; --mint: #2FB38F; --sky: #4C9BEA; --butter: #FFC43D; --lilac: #9C7CEB;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Lexend", system-ui, sans-serif; color: var(--ink); line-height: 1.65; background: var(--cloud); font-size: 17px; }
+  h1, h2, h3 { font-family: "Lilita One", "Lexend", sans-serif; font-weight: 400; line-height: 1.08; margin: 0 0 .45em; color: var(--ink); letter-spacing: .005em; }
+  a { color: inherit; }
+  svg { max-width: 100%; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  .preview { background: var(--ink); color: #ECEAFF; font-size: 13px; text-align: center; padding: 7px 12px; }
+  .preview b { color: var(--butter); } .preview a { color: var(--butter); font-weight: 700; }
+
+  header { position: sticky; top: 0; z-index: 20; background: rgba(247,245,255,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .head { display: flex; align-items: center; justify-content: space-between; gap: 14px; height: 74px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .logo .nm { font-family: "Lilita One"; font-size: 25px; line-height: 1; }
+  .logo .nm .n1 { color: var(--coral); } .logo .nm .n2 { color: var(--mint); } .logo .nm .n3 { color: var(--sky); }
+  .logo small { display: block; font-weight: 600; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  nav { display: flex; gap: 22px; font-weight: 600; font-size: 15px; }
+  nav a { text-decoration: none; color: var(--ink2); }
+  nav a:hover { color: var(--coral-d); }
+  .call { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--coral); color: #fff; font-weight: 700; text-decoration: none; padding: 13px 20px; border-radius: 999px; white-space: nowrap; box-shadow: 0 4px 0 var(--coral-d); transition: transform .15s; }
+  .call:hover { transform: translateY(-1px); }
+  .ghost { display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; border-radius: 999px; border: 2.5px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 700; background: #fff; }
+  .ghost:hover { background: var(--ink); color: #fff; }
+
+  /* bead rail motif */
+  .rail { height: 26px; position: relative; background: linear-gradient(var(--ink2), var(--ink2)) center/100% 3px no-repeat; }
+  .rail span { position: absolute; top: 2px; width: 22px; height: 22px; border-radius: 50%; box-shadow: inset -3px -4px 0 rgba(0,0,0,.12); }
+
+  .hero { padding: 54px 0 36px; position: relative; overflow: hidden; }
+  .hero .grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; }
+  .tag { display: inline-flex; align-items: center; gap: 9px; background: #fff; border: 1.5px solid var(--line); padding: 7px 14px; border-radius: 999px; font-weight: 600; font-size: 14px; color: var(--ink2); }
+  .tag i { width: 10px; height: 10px; border-radius: 50%; background: var(--mint); display: inline-block; }
+  .hero h1 { font-size: clamp(40px, 6.2vw, 66px); margin: 18px 0 16px; }
+  .hero h1 .c1 { color: var(--coral); } .hero h1 .c2 { color: var(--mint); } .hero h1 .c3 { color: var(--sky); }
+  .hero p.lead { font-size: 19px; color: var(--muted); max-width: 540px; margin: 0 0 26px; }
+  .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 26px; font-size: 14.5px; font-weight: 600; color: var(--ink2); }
+  .facts span { display: inline-flex; align-items: center; gap: 8px; }
+  .facts b { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .art { background: #fff; border-radius: 34px; border: 1.5px solid var(--line); padding: 18px; box-shadow: 0 24px 50px -28px rgba(36,34,79,.35); }
+
+  .band { background: var(--ink); color: #fff; }
+  .band .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+  .band div.it { padding: 22px 18px; text-align: center; border-right: 1px solid rgba(255,255,255,.12); }
+  .band div.it:last-child { border-right: 0; }
+  .band b { display: block; font-family: "Lilita One"; font-weight: 400; font-size: 30px; line-height: 1.1; }
+  .band small { color: #C9C6F0; font-size: 13.5px; font-weight: 500; }
+
+  section { padding: 76px 0; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--coral-d); margin-bottom: 10px; }
+  h2 { font-size: clamp(32px, 4.4vw, 46px); }
+  .sub { color: var(--muted); max-width: 640px; margin: 0 0 36px; font-size: 18px; }
+
+  .ages { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .age { background: #fff; border-radius: 26px; padding: 26px 22px; border: 1.5px solid var(--line); position: relative; }
+  .age .num { font-family: "Lilita One"; font-size: 54px; line-height: 1; }
+  .age .beads { display: flex; gap: 5px; margin: 12px 0 14px; }
+  .age .beads i { width: 16px; height: 16px; border-radius: 50%; display: block; box-shadow: inset -2px -3px 0 rgba(0,0,0,.12); }
+  .age h3 { font-size: 25px; margin-bottom: 6px; }
+  .age p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  .alt { background: var(--cloud2); }
+  .offer { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: #fff; border-radius: 26px; padding: 28px 24px; border: 1.5px solid var(--line); }
+  .card .ic { width: 58px; height: 58px; border-radius: 18px; display: grid; place-items: center; margin-bottom: 16px; }
+  .card h3 { font-size: 24px; margin-bottom: 6px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  .why { display: grid; grid-template-columns: .9fr 1.1fr; gap: 44px; align-items: start; }
+  .license { background: var(--ink); color: #fff; border-radius: 26px; padding: 28px; position: relative; overflow: hidden; }
+  .license small { display: block; color: var(--butter); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: 12px; }
+  .license b { display: block; font-family: "Lilita One"; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 8px 0; }
+  .license p { margin: 0; color: #CFCCF2; font-size: 15px; }
+  .license .rail { margin-top: 20px; background: linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,.35)) center/100% 3px no-repeat; }
+  .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .list li { display: flex; gap: 16px; background: #fff; border: 1.5px solid var(--line); border-radius: 20px; padding: 18px 20px; }
+  .list .dot { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-family: "Lilita One"; font-size: 20px; box-shadow: inset -3px -4px 0 rgba(0,0,0,.14); }
+  .list b { display: block; font-size: 17px; }
+  .list span { color: var(--muted); font-size: 15.5px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; position: relative; }
+  .step { background: #fff; border-radius: 26px; padding: 30px 24px 26px; border: 1.5px solid var(--line); text-align: center; }
+  .step .big { width: 86px; height: 86px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center; font-family: "Lilita One"; font-size: 46px; color: #fff; box-shadow: inset -6px -8px 0 rgba(0,0,0,.13); }
+  .step h3 { font-size: 24px; margin-bottom: 6px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15.5px; }
+
+  .loc { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+  .panel { background: #fff; border-radius: 26px; padding: 30px; border: 1.5px solid var(--line); }
+  .hours { width: 100%; border-collapse: collapse; font-size: 16px; }
+  .hours td { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+  .hours td:last-child { text-align: right; font-weight: 600; }
+  .hours tr.off td { color: var(--muted); }
+  .hours tr.off td:last-child { font-weight: 500; }
+  .map { background: var(--cloud2); border-radius: 20px; padding: 6px; margin-top: 18px; }
+
+  .about { display: grid; grid-template-columns: 320px 1fr; gap: 44px; align-items: center; }
+  .mono { aspect-ratio: 1; border-radius: 50%; background: var(--butter); display: grid; place-items: center; position: relative; box-shadow: inset -14px -18px 0 rgba(0,0,0,.08); }
+  .mono span { font-family: "Lilita One"; font-size: 110px; color: var(--ink); line-height: 1; }
+  .about p { color: var(--ink2); font-size: 17.5px; }
+
+  .contact { background: var(--ink); color: #fff; }
+  .contact h2 { color: #fff; }
+  .contact .sub { color: #CFCCF2; }
+  .cgrid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 36px; }
+  .cline { display: flex; align-items: center; gap: 14px; text-decoration: none; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .ci { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.1); color: var(--butter); flex: none; }
+  .cline small { display: block; color: #B9B6E6; font-size: 13px; }
+  .cline b { font-size: 17px; word-break: break-word; }
+  form { background: #fff; color: var(--ink); border-radius: 26px; padding: 28px; display: grid; gap: 14px; }
+  form h3 { font-size: 26px; margin: 0; }
+  label { font-size: 14px; font-weight: 600; display: grid; gap: 6px; }
+  input, select, textarea { font: inherit; font-size: 16px; padding: 12px 14px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--cloud); color: var(--ink); width: 100%; }
+  textarea { min-height: 96px; resize: vertical; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  form button { font: inherit; border: 0; cursor: pointer; }
+  .fine { font-size: 13px; color: var(--muted); margin: 0; }
+
+  footer { background: #1A1940; color: #C9C6F0; font-size: 14.5px; padding: 30px 0; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+  footer b { color: #fff; }
+  footer a { color: #fff; text-decoration: none; }
+
+  @media (max-width: 960px) {
+    nav { display: none; }
+    .hero .grid, .why, .loc, .about, .cgrid { grid-template-columns: 1fr; }
+    .ages { grid-template-columns: 1fr 1fr; }
+    .offer, .steps { grid-template-columns: 1fr; }
+    .about .mono { max-width: 200px; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .head { height: 66px; }
+    .logo .nm { font-size: 21px; }
+    .logo small { font-size: 9.5px; letter-spacing: .1em; }
+    .head .call { padding: 11px 14px; font-size: 14.5px; }
+    .head .call .full { display: none; }
+    .hero { padding: 36px 0 26px; }
+    .hero p.lead { font-size: 17px; }
+    .ctas a { flex: 1 1 100%; }
+    .band .wrap { grid-template-columns: 1fr 1fr; }
+    .band div.it:nth-child(2) { border-right: 0; }
+    .band div.it:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.12); }
+    .band b { font-size: 25px; }
+    section { padding: 56px 0; }
+    .ages { grid-template-columns: 1fr; }
+    .two { grid-template-columns: 1fr; }
+    .panel, form, .license { padding: 22px; }
+  }
+  @media (min-width: 561px) { .head .call .short { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="preview"><b>Free design preview</b> for Baby 1-2-3 Daycare by Affordable Web Designs · Like it? Call Johnny <a href="tel:8325080059">832-508-0059</a></div>
+
+<header>
+  <div class="wrap head">
+    <a class="logo" href="#top" aria-label="Baby 1-2-3 Daycare home">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+        <rect x="3" y="5" width="38" height="34" rx="9" fill="none" stroke="#24224F" stroke-width="3"/>
+        <line x1="5" y1="15" x2="39" y2="15" stroke="#24224F" stroke-width="1.8"/>
+        <line x1="5" y1="22" x2="39" y2="22" stroke="#24224F" stroke-width="1.8"/>
+        <line x1="5" y1="29" x2="39" y2="29" stroke="#24224F" stroke-width="1.8"/>
+        <circle cx="12" cy="15" r="4" fill="#FF6F61"/>
+        <circle cx="12" cy="22" r="4" fill="#2FB38F"/><circle cx="20" cy="22" r="4" fill="#2FB38F"/>
+        <circle cx="12" cy="29" r="4" fill="#4C9BEA"/><circle cx="20" cy="29" r="4" fill="#4C9BEA"/><circle cx="28" cy="29" r="4" fill="#4C9BEA"/>
+      </svg>
+      <span><span class="nm">Baby <span class="n1">1</span>-<span class="n2">2</span>-<span class="n3">3</span> Daycare</span><small>Licensed Home Daycare · Katy</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#ages">Ages</a><a href="#care">Care</a><a href="#why">Why us</a><a href="#enroll">Enroll</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:2816221816" aria-label="Call Baby 1-2-3 Daycare at (281) 622-1816">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+      <span class="full">(281) 622-1816</span><span class="short">Call</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <div class="tag"><i></i>Texas-licensed child-care home · Katy, TX</div>
+        <h1>Loving care, as easy as <span class="c1">1</span>-<span class="c2">2</span>-<span class="c3">3</span>.</h1>
+        <p class="lead">Baby 1-2-3 Daycare is Bridgette Williams' licensed home daycare in Katy, caring for infants, toddlers, pre-K and school-age children in a small group, with meals and snacks provided.</p>
+        <div class="ctas">
+          <a class="call" href="tel:2816221816">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+            Call (281) 622-1816
+          </a>
+          <a class="ghost" href="#contact">Schedule a visit</a>
+        </div>
+        <div class="facts">
+          <span><b style="background:#FF6F61"></b>Mon–Fri, 7 AM–6 PM</span>
+          <span><b style="background:#2FB38F"></b>Up to 12 children</span>
+          <span><b style="background:#4C9BEA"></b>Subsidies accepted</span>
+        </div>
+      </div>
+
+      <div class="art">
+        <svg viewBox="0 0 480 400" role="img" aria-label="Illustration of a colorful counting abacus with one, two and three beads">
+          <rect x="0" y="0" width="480" height="400" rx="24" fill="#F7F5FF"/>
+          <!-- soft clouds -->
+          <g fill="#fff"><ellipse cx="90" cy="58" rx="54" ry="20"/><ellipse cx="120" cy="46" rx="34" ry="20"/><ellipse cx="380" cy="70" rx="46" ry="16"/><ellipse cx="404" cy="60" rx="28" ry="16"/></g>
+          <!-- sun -->
+          <circle cx="410" cy="128" r="26" fill="#FFC43D"/>
+          <g stroke="#FFC43D" stroke-width="5" stroke-linecap="round"><line x1="410" y1="86" x2="410" y2="76"/><line x1="452" y1="128" x2="462" y2="128"/><line x1="440" y1="98" x2="447" y2="91"/><line x1="440" y1="158" x2="447" y2="165"/></g>
+          <!-- abacus frame -->
+          <rect x="52" y="96" width="320" height="236" rx="26" fill="none" stroke="#24224F" stroke-width="12"/>
+          <rect x="70" y="332" width="20" height="40" rx="8" fill="#24224F"/><rect x="334" y="332" width="20" height="40" rx="8" fill="#24224F"/>
+          <g stroke="#3B3874" stroke-width="5"><line x1="58" y1="150" x2="366" y2="150"/><line x1="58" y1="214" x2="366" y2="214"/><line x1="58" y1="278" x2="366" y2="278"/></g>
+          <!-- row 1: one bead slid left -->
+          <circle cx="96" cy="150" r="24" fill="#FF6F61"/><ellipse cx="88" cy="141" rx="7" ry="5" fill="#fff" opacity=".55"/>
+          <circle cx="288" cy="150" r="20" fill="#E2DEF5"/><circle cx="330" cy="150" r="20" fill="#E2DEF5"/>
+          <!-- row 2: two beads -->
+          <circle cx="96" cy="214" r="24" fill="#2FB38F"/><ellipse cx="88" cy="205" rx="7" ry="5" fill="#fff" opacity=".55"/>
+          <circle cx="146" cy="214" r="24" fill="#2FB38F"/><ellipse cx="138" cy="205" rx="7" ry="5" fill="#fff" opacity=".55"/>
+          <circle cx="330" cy="214" r="20" fill="#E2DEF5"/>
+          <!-- row 3: three beads -->
+          <circle cx="96" cy="278" r="24" fill="#4C9BEA"/><ellipse cx="88" cy="269" rx="7" ry="5" fill="#fff" opacity=".55"/>
+          <circle cx="146" cy="278" r="24" fill="#4C9BEA"/><ellipse cx="138" cy="269" rx="7" ry="5" fill="#fff" opacity=".55"/>
+          <circle cx="196" cy="278" r="24" fill="#4C9BEA"/><ellipse cx="188" cy="269" rx="7" ry="5" fill="#fff" opacity=".55"/>
+          <!-- numerals -->
+          <g font-family="Lilita One, sans-serif" font-size="40" fill="#24224F" text-anchor="middle">
+            <text x="26" y="164">1</text><text x="26" y="228">2</text><text x="26" y="292">3</text>
+          </g>
+          <!-- rattle -->
+          <g transform="translate(404 270) rotate(28)">
+            <rect x="-6" y="0" width="12" height="70" rx="6" fill="#9C7CEB"/>
+            <circle cx="0" cy="-12" r="30" fill="#FFC43D"/>
+            <circle cx="0" cy="-12" r="18" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="6 7"/>
+            <circle cx="0" cy="78" r="11" fill="#9C7CEB"/>
+          </g>
+          <!-- little hearts -->
+          <path d="M432 214c-6-8-20-2-14 8l14 12 14-12c6-10-8-16-14-8z" fill="#FF6F61" opacity=".85"/>
+          <path d="M30 360c-4-5-13-1-9 5l9 8 9-8c4-6-5-10-9-5z" fill="#9C7CEB"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="band" aria-label="Quick facts">
+    <div class="wrap">
+      <div class="it"><b>7 AM – 6 PM</b><small>Monday to Friday</small></div>
+      <div class="it"><b>Up to 12</b><small>children (licensed capacity)</small></div>
+      <div class="it"><b>4 age groups</b><small>infants through school age</small></div>
+      <div class="it"><b>Meals + snacks</b><small>provided each day</small></div>
+    </div>
+  </div>
+
+  <section id="ages">
+    <div class="wrap">
+      <div class="eyebrow">Ages we care for</div>
+      <h2>From first steps to school days</h2>
+      <p class="sub">Baby 1-2-3 Daycare is licensed by the State of Texas to care for children from infancy through school age.</p>
+      <div class="ages">
+        <div class="age">
+          <div class="num" style="color:#FF6F61">1</div>
+          <div class="beads"><i style="background:#FF6F61"></i></div>
+          <h3>Infants</h3>
+          <p>Gentle, attentive care for the littlest ones, in a calm home setting.</p>
+        </div>
+        <div class="age">
+          <div class="num" style="color:#2FB38F">2</div>
+          <div class="beads"><i style="background:#2FB38F"></i><i style="background:#2FB38F"></i></div>
+          <h3>Toddlers</h3>
+          <p>Room to explore, play and grow alongside a small group of friends.</p>
+        </div>
+        <div class="age">
+          <div class="num" style="color:#4C9BEA">3</div>
+          <div class="beads"><i style="background:#4C9BEA"></i><i style="background:#4C9BEA"></i><i style="background:#4C9BEA"></i></div>
+          <h3>Pre-K</h3>
+          <p>Getting ready for the big step into school, one day at a time.</p>
+        </div>
+        <div class="age">
+          <div class="num" style="color:#9C7CEB">4</div>
+          <div class="beads"><i style="background:#9C7CEB"></i><i style="background:#9C7CEB"></i><i style="background:#9C7CEB"></i><i style="background:#9C7CEB"></i></div>
+          <h3>School age</h3>
+          <p>School-age children are welcome too. Call to ask about current openings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="care" class="alt">
+    <div class="wrap">
+      <div class="eyebrow">What's included</div>
+      <h2>Everything a full day needs</h2>
+      <p class="sub">Full weekday care in a real home, with meals and snacks included, as listed with Texas Child Care Licensing. Call to ask about openings and schedules.</p>
+      <div class="offer">
+        <div class="card">
+          <div class="ic" style="background:#FFE6E3"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D9503F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Full-day care</h3>
+          <p>Open 7:00 AM to 6:00 PM, Monday through Friday, so drop-off and pick-up fit a working day.</p>
+        </div>
+        <div class="card">
+          <div class="ic" style="background:#DDF5EC"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1F8E70" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3"/></svg></div>
+          <h3>Meals provided</h3>
+          <p>Children are served meals during the day, so there's one less thing to pack.</p>
+        </div>
+        <div class="card">
+          <div class="ic" style="background:#FFF2CF"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#B9850C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4c3 0 6 3 6 7.5S15.5 20 12 20 6 16 6 11.5 9 4 12 4z"/><path d="M12 4c0-1 .7-2 2-2"/></svg></div>
+          <h3>Snacks provided</h3>
+          <p>Snack time is part of the routine, to keep little ones fueled for play.</p>
+        </div>
+        <div class="card">
+          <div class="ic" style="background:#E0EEFC"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2F79C4" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
+          <h3>A real home setting</h3>
+          <p>A licensed child-care home: your child spends the day in a home, not a big center.</p>
+        </div>
+        <div class="card">
+          <div class="ic" style="background:#ECE5FC"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#7656CF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></div>
+          <h3>A small group</h3>
+          <p>Licensed for up to 12 children, so every child is known by name.</p>
+        </div>
+        <div class="card">
+          <div class="ic" style="background:#FFE6E3"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D9503F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></div>
+          <h3>Child-care subsidies</h3>
+          <p>Baby 1-2-3 Daycare accepts child-care subsidies. Call to ask how it works for your family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap why">
+      <div>
+        <div class="eyebrow">Why families choose us</div>
+        <h2>Small, licensed and close to home</h2>
+        <p class="sub" style="margin-bottom:0">A home daycare means a smaller group, a familiar face every day, and care that feels like family.</p>
+        <div class="license" style="margin-top:26px">
+          <small>State of Texas · HHS Child Care Licensing</small>
+          <b>Licensed Child-Care Home<br>Operation #1756871</b>
+          <p>Full permit issued May 2023 · Harris County</p>
+          <div class="rail" aria-hidden="true"><span style="left:0;background:#FF6F61"></span><span style="left:28px;background:#2FB38F"></span><span style="left:56px;background:#4C9BEA"></span><span style="right:0;background:#FFC43D"></span></div>
+        </div>
+      </div>
+      <ul class="list">
+        <li><span class="dot" style="background:#FF6F61">1</span><div><b>Licensed by the State of Texas</b><span>A licensed child-care home with a full permit from Texas HHS Child Care Licensing.</span></div></li>
+        <li><span class="dot" style="background:#2FB38F">2</span><div><b>Owner-run, every day</b><span>Bridgette Williams runs Baby 1-2-3 Daycare herself, out of her own home in Katy.</span></div></li>
+        <li><span class="dot" style="background:#4C9BEA">3</span><div><b>A small group: up to 12 children</b><span>A licensed capacity of 12 keeps the group small and personal.</span></div></li>
+        <li><span class="dot" style="background:#9C7CEB">4</span><div><b>Infants through school age</b><span>Siblings of different ages can spend the day under one roof.</span></div></li>
+        <li><span class="dot" style="background:#FFC43D;color:#24224F">5</span><div><b>Meals, snacks and subsidies</b><span>Meals and snacks are provided, and child-care subsidies are accepted.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="enroll" class="alt">
+    <div class="wrap">
+      <div class="eyebrow">How to enroll</div>
+      <h2>Getting started is as easy as 1-2-3</h2>
+      <p class="sub">Three simple steps from first call to first day.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="big" style="background:#FF6F61">1</div>
+          <h3>Call or email</h3>
+          <p>Reach Bridgette at (281) 622-1816 or by email to ask about openings for your child's age.</p>
+        </div>
+        <div class="step">
+          <div class="big" style="background:#2FB38F">2</div>
+          <h3>Come for a visit</h3>
+          <p>See the home, meet Bridgette, and ask all your questions about the daily routine.</p>
+        </div>
+        <div class="step">
+          <div class="big" style="background:#4C9BEA">3</div>
+          <h3>Pick a start date</h3>
+          <p>Fill out the enrollment paperwork and choose the day your little one starts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <div class="wrap loc">
+      <div class="panel">
+        <div class="eyebrow">Hours</div>
+        <h2 style="font-size:36px">Open weekdays, 7 to 6</h2>
+        <table class="hours">
+          <tr><td>Monday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Thursday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr><td>Friday</td><td>7:00 AM – 6:00 PM</td></tr>
+          <tr class="off"><td>Saturday &amp; Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">Location</div>
+        <h2 style="font-size:36px">Right here in Katy</h2>
+        <p style="color:var(--muted);margin:0">Baby 1-2-3 Daycare is a home daycare in Katy, TX 77450 (Harris County). Call to schedule a visit and get directions.</p>
+        <div class="map" aria-hidden="true">
+          <svg viewBox="0 0 400 150" width="100%">
+            <rect width="400" height="150" rx="16" fill="#EEEAFD"/>
+            <g stroke="#fff" stroke-width="12" stroke-linecap="round" fill="none"><path d="M-10 100 C 90 80, 160 120, 410 70"/><path d="M130 -10 L 170 160"/><path d="M290 -10 L 270 160"/></g>
+            <g fill="#DDD7F7"><rect x="30" y="20" width="70" height="44" rx="8"/><rect x="196" y="18" width="62" height="40" rx="8"/><rect x="310" y="100" width="70" height="38" rx="8"/><rect x="40" y="118" width="70" height="28" rx="8"/></g>
+            <path d="M226 106c0-16 12-26 24-26s24 10 24 26c0 18-24 38-24 38s-24-20-24-38z" fill="#FF6F61"/>
+            <circle cx="250" cy="106" r="9" fill="#fff"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="alt">
+    <div class="wrap about">
+      <div class="mono" aria-hidden="true"><span>BW</span></div>
+      <div>
+        <div class="eyebrow">Meet the owner</div>
+        <h2>Meet Bridgette Williams</h2>
+        <p>Baby 1-2-3 Daycare is Bridgette Williams' licensed child-care home in Katy. She is the director on the state license and runs the daycare herself, out of her own home, caring for children from infancy through school age.</p>
+        <p>The daycare is open Monday through Friday from 7:00 AM to 6:00 PM, serves meals and snacks, and accepts child-care subsidies. The best way to learn more is to call Bridgette and set up a visit.</p>
+        <a class="call" href="tel:2816221816" style="margin-top:6px">Call Bridgette: (281) 622-1816</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--butter)">Contact</div>
+      <h2>Let's find a spot for your little one</h2>
+      <p class="sub">Call, email, or send a quick note below to ask about openings and set up a visit.</p>
+      <div class="cgrid">
+        <div>
+          <a class="cline" href="tel:2816221816"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg></span><span><small>Phone</small><b>(281) 622-1816</b></span></a>
+          <a class="cline" href="mailto:baby123daycare@gmail.com"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Email</small><b>baby123daycare@gmail.com</b></span></a>
+          <div class="cline"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><small>Hours</small><b>Mon–Fri, 7:00 AM – 6:00 PM</b></span></div>
+          <div class="cline" style="border-bottom:0"><span class="ci"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Location</small><b>Katy, TX 77450 · call for directions</b></span></div>
+        </div>
+        <form action="mailto:baby123daycare@gmail.com" method="post" enctype="text/plain">
+          <h3>Ask about openings</h3>
+          <div class="two">
+            <label>Your name<input name="name" autocomplete="name" required></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <div class="two">
+            <label>Child's age
+              <select name="age"><option>Infant</option><option>Toddler</option><option>Pre-K</option><option>School age</option></select>
+            </label>
+            <label>Hoped-for start date<input name="start" placeholder="e.g. January"></label>
+          </div>
+          <label>Message<textarea name="message" placeholder="Tell us a little about your family and schedule"></textarea></label>
+          <button class="call" type="submit">Send to Bridgette</button>
+          <p class="fine">Opens your email app, addressed to baby123daycare@gmail.com. Prefer to talk? Call (281) 622-1816.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Baby 1-2-3 Daycare</b><br>Licensed child-care home · Katy, TX</div>
+    <div><a href="tel:2816221816">(281) 622-1816</a> · <a href="mailto:baby123daycare@gmail.com">baby123daycare@gmail.com</a><br>© 2026 Baby 1-2-3 Daycare</div>
+  </div>
+</footer>
+
+</body>
+</html>
