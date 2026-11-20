@@ -86,6 +86,13 @@
   .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
   .art { position: relative; }
   .art svg { display: block; width: 100%; height: auto; }
+  .hero-art svg { margin-bottom: -70px; position: relative; z-index: 0; }
+  .hero-art .bus { position: relative; z-index: 1; display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 24px rgba(0,0,0,.45)); animation: hover 5s ease-in-out infinite; }
+  @keyframes hover { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(0.5deg); } }
+  @media (prefers-reduced-motion: reduce) { .hero-art .bus { animation: none; } }
+  .bus-247 { margin: 6px 0 0; text-align: center; line-height: 1; }
+  .bus-247 b { display: block; font-family: "Baloo 2"; font-weight: 800; font-size: clamp(64px, 9vw, 104px); color: var(--yellow); letter-spacing: .02em; text-shadow: 0 6px 0 #C99700, 0 0 30px rgba(251,199,19,.35); }
+  .bus-247 span { display: block; margin-top: 10px; font-weight: 900; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: #DCE2FF; }
 
   /* window-panel strip */
   .panels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 46px; border-top: 6px solid #050A24; }
@@ -279,8 +286,8 @@
         </div>
       </div>
 
-      <div class="art" aria-hidden="true">
-        <svg viewBox="0 0 560 480">
+      <div class="art hero-art">
+        <svg viewBox="0 0 560 250" aria-hidden="true">
           <defs>
             <radialGradient id="gal" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFD6F2"/><stop offset=".35" stop-color="#E0489A" stop-opacity=".8"/><stop offset="1" stop-color="#8B4FD8" stop-opacity="0"/></radialGradient>
             <linearGradient id="flame" x1="1" x2="0"><stop offset="0" stop-color="#FFE27A"/><stop offset=".45" stop-color="#F47B20"/><stop offset="1" stop-color="#E8302E" stop-opacity="0"/></linearGradient>
@@ -323,36 +330,11 @@
             <rect x="-22" y="62" width="17" height="24" rx="7" fill="#F3F5FF" stroke="#B9C2E6" stroke-width="3"/>
             <rect x="5" y="62" width="17" height="24" rx="7" fill="#F3F5FF" stroke="#B9C2E6" stroke-width="3"/>
           </g>
-          <!-- flying school bus -->
-          <g transform="translate(60 250) rotate(-8)">
-            <path d="M0 70c-40-8-70 0-110 6 40 8 70 16 110 14z" fill="url(#flame)"/>
-            <path d="M0 110c-34-6-60 0-90 4 32 6 58 12 90 10z" fill="url(#flame)" opacity=".85"/>
-            <rect x="0" y="40" width="330" height="120" rx="20" fill="url(#busg)" stroke="#C99700" stroke-width="3"/>
-            <path d="M330 70h48c14 0 22 10 22 22v50c0 10-8 18-18 18h-52z" fill="url(#busg)" stroke="#C99700" stroke-width="3"/>
-            <rect x="340" y="80" width="40" height="34" rx="6" fill="#9FD3FF" stroke="#1B2A66" stroke-width="3"/>
-            <rect x="376" y="124" width="22" height="22" rx="4" fill="#C0C7DE"/><path d="M379 129h16M379 135h16M379 141h16" stroke="#7D86A8" stroke-width="2"/>
-            <circle cx="396" cy="108" r="9" fill="#FFF6C9" stroke="#C99700" stroke-width="3"/>
-            <rect x="110" y="16" width="120" height="28" rx="8" fill="#FBC713" stroke="#C99700" stroke-width="3"/>
-            <text x="170" y="36" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="15" fill="#121A44">SCHOOL BUS</text>
-            <!-- windows with kids -->
-            <g>
-              <rect x="22" y="56" width="58" height="50" rx="8" fill="#9FD3FF" stroke="#1B2A66" stroke-width="3"/>
-              <rect x="92" y="56" width="58" height="50" rx="8" fill="#9FD3FF" stroke="#1B2A66" stroke-width="3"/>
-              <rect x="162" y="56" width="58" height="50" rx="8" fill="#9FD3FF" stroke="#1B2A66" stroke-width="3"/>
-              <rect x="232" y="56" width="58" height="50" rx="8" fill="#9FD3FF" stroke="#1B2A66" stroke-width="3"/>
-              <g transform="translate(51 92)"><path d="M-16 14c0-12 32-12 32 0z" fill="#8B4FD8"/><circle cy="-6" r="13" fill="#8D5A3B"/><path d="M-13-10c2-12 24-12 26 0-6-5-20-5-26 0z" fill="#2B1A12"/><circle cx="-4" cy="-6" r="1.8" fill="#121A44"/><circle cx="4" cy="-6" r="1.8" fill="#121A44"/><path d="M-4 0q4 3 8 0" stroke="#121A44" stroke-width="1.8" fill="none"/></g>
-              <g transform="translate(121 92)"><path d="M-16 14c0-12 32-12 32 0z" fill="#1F7EE6"/><circle cy="-6" r="13" fill="#F2C9A0"/><path d="M-13-8c0-12 26-12 26 0-8-4-18-4-26 0z" fill="#E08A2E"/><circle cx="-4" cy="-6" r="1.8" fill="#121A44"/><circle cx="4" cy="-6" r="1.8" fill="#121A44"/><path d="M-4 0q4 3 8 0" stroke="#121A44" stroke-width="1.8" fill="none"/></g>
-              <g transform="translate(191 92)"><path d="M-16 14c0-12 32-12 32 0z" fill="#E8302E"/><circle cy="-6" r="13" fill="#C68B5E"/><path d="M-13-9c2-10 24-10 26 0-8-3-18-3-26 0z" fill="#3A2416"/><circle cx="-4" cy="-6" r="1.8" fill="#121A44"/><circle cx="4" cy="-6" r="1.8" fill="#121A44"/><path d="M-4 0q4 3 8 0" stroke="#121A44" stroke-width="1.8" fill="none"/></g>
-              <g transform="translate(261 92)"><path d="M-16 14c0-12 32-12 32 0z" fill="#34B04A"/><circle cy="-6" r="13" fill="#5C3A26"/><path d="M-13-9c2-10 24-10 26 0-8-3-18-3-26 0z" fill="#1A0F09"/><circle cx="-4" cy="-6" r="1.8" fill="#fff"/><circle cx="4" cy="-6" r="1.8" fill="#fff"/><path d="M-4 0q4 3 8 0" stroke="#fff" stroke-width="1.8" fill="none"/></g>
-              <path d="M268 74l10-14" stroke="#5C3A26" stroke-width="7" stroke-linecap="round"/>
-            </g>
-            <rect x="0" y="110" width="330" height="7" fill="#121A44"/>
-            <text x="190" y="138" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="16" fill="#121A44" letter-spacing="1">YOUNG EXPLORERS</text>
-            <g><circle cx="80" cy="162" r="26" fill="#121A44"/><circle cx="80" cy="162" r="11" fill="#C0C7DE"/><circle cx="300" cy="162" r="26" fill="#121A44"/><circle cx="300" cy="162" r="11" fill="#C0C7DE"/></g>
-          </g>
           <!-- sparkles -->
-          <g fill="#FFE9A8"><path d="M470 220l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M40 420l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path d="M420 330l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+          <g fill="#FFE9A8"><path d="M470 200l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M40 230l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
         </svg>
+        <img class="bus" src="blast-off-bus.webp" width="960" height="673" alt="The Young Explorers Early Learning Academy school bus blasting off, with kids waving from the windows">
+        <p class="bus-247"><b>24 / 7</b><span>Day, night &amp; weekend care</span></p>
       </div>
     </div>
 
@@ -367,7 +349,7 @@
 
   <div class="band stars">
     <div class="wrap row">
-      <div><b>24 / 7</b><span>Day, night &amp; weekend care</span></div>
+      <div><b>School rides</b><span>To and from school</span></div>
       <div><b>All ages</b><span>Infants to school-age</span></div>
       <div><b>Since 2018</b><span>Caring for Pearland kids</span></div>
       <div><b>Subsidies</b><span>Accepted, ask how it works</span></div>
