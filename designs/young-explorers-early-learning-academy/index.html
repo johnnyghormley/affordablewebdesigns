@@ -86,16 +86,17 @@
   .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
   .art { position: relative; }
   .art svg { display: block; width: 100%; height: auto; }
-  .hero-art svg { margin-bottom: -70px; position: relative; z-index: 0; }
+  .hero-art svg { margin-bottom: -40px; position: relative; z-index: 0; }
   /* The bus art came cropped (its nose and the bottoms of the flames/rear wheel end at the image edge), so:
      the bus runs off the right edge of the screen (flying into frame), smoke covers the bottom cut, flames fade on the left. */
-  .bus-wrap { position: relative; z-index: 1; margin-right: calc(-1 * (max(0px, (100vw - 1140px) / 2) + 20px)); animation: hover 5s ease-in-out infinite; }
+  .hero-art { --bleed: calc(max(0px, (100vw - 1140px) / 2) + 20px); --bus: 0.72; }
+  .bus-wrap { position: relative; z-index: 1; width: calc((100% + var(--bleed)) * var(--bus)); margin-left: auto; margin-right: calc(-1 * var(--bleed)); animation: hover 5s ease-in-out infinite; }
   .hero-art .bus { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 24px rgba(0,0,0,.45));
     -webkit-mask-image: linear-gradient(to right, transparent 0, #000 9%); mask-image: linear-gradient(to right, transparent 0, #000 9%); }
   .hero-art svg.smoke { position: absolute; left: -2%; bottom: -3%; width: 50%; height: 14%; margin: 0; z-index: 2; filter: drop-shadow(0 0 12px rgba(199,205,235,.5)); }
   @keyframes hover { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(0.5deg); } }
   @media (prefers-reduced-motion: reduce) { .bus-wrap { animation: none; } }
-  .bus-247 { margin: 6px 0 0; text-align: center; line-height: 1; }
+  .bus-247 { margin: 6px calc(-1 * var(--bleed)) 0 auto; width: calc((100% + var(--bleed)) * var(--bus)); text-align: center; line-height: 1; }
   .bus-247 b { display: block; font-family: "Baloo 2"; font-weight: 800; font-size: clamp(64px, 9vw, 104px); color: var(--yellow); letter-spacing: .02em; text-shadow: 0 6px 0 #C99700, 0 0 30px rgba(251,199,19,.35); }
   .bus-247 span { display: block; margin-top: 10px; font-weight: 900; font-size: 15px; letter-spacing: .16em; text-transform: uppercase; color: #DCE2FF; }
 
@@ -203,7 +204,8 @@
     .agecards { grid-template-columns: 1fr; max-width: 520px; }
     .art { max-width: 560px; margin: 0 auto; }
     .hero-art { max-width: none; margin: 0; }
-    .bus-wrap { margin-right: -20px; }
+    .hero-art { --bleed: 20px; --bus: 0.8; }
+    .bus-247 { width: auto; margin: 6px 0 0; }
     .about .art { max-width: 320px; }
   }
   @media (max-width: 640px) {
