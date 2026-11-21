@@ -158,6 +158,14 @@
 
   /* contact */
   .contact { background: var(--bg-2); border-top: 1px solid var(--line); }
+  /* EZFormz order form (2026-11-21) */
+  .order-intro { max-width: 760px; margin: 0 auto; text-align: center; }
+  .order-intro .offers { margin-top: 22px; }
+  .order-embed { max-width: 1000px; margin: 40px auto 0; padding: 14px; background: #0A0A0A; }
+  .order-embed iframe { display: block; width: 100%; height: 1700px; border: 0; background: #0A0A0A; }
+  .order-alt { max-width: 760px; margin: 26px auto 0; text-align: center; color: var(--muted); font-size: 18px; }
+  .order-alt a { color: var(--gold-hi); }
+  #order .secure { text-align: center; }
   .cgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
   .clinks { display: grid; gap: 16px; margin: 30px 0 0; }
   .clink { display: flex; align-items: center; gap: 18px; padding: 22px 24px; background: var(--bg); border: 1px solid var(--line); text-decoration: none; transition: border-color .2s; }
@@ -186,6 +194,7 @@
   @media (max-width: 960px) {
     nav { display: none; }
     .hero-grid, .commit, .cgrid { grid-template-columns: 1fr; gap: 44px; }
+    .order-embed { padding: 6px; margin-top: 30px; }
     .vial-wrap { order: -1; } .vial { width: 240px; }
     .grid4 { grid-template-columns: 1fr 1fr; }
     .steps { grid-template-columns: 1fr; }
@@ -242,7 +251,7 @@
     <p class="lede">Research-grade peptides manufactured with precision, tested for purity, and delivered with confidence.</p>
     <div class="btns">
       <a class="btn btn-gold" href="#price-list">View the Price List</a>
-      <a class="btn btn-line" href="mailto:stoneresearchlabs@gmail.com?subject=Stone%20Research%20Labs%20order%20request">Request an Order</a>
+      <a class="btn btn-line" href="#order">Order Online</a>
     </div>
     <p class="ruo">For research use only. Not for human consumption.</p>
   </div>
@@ -292,7 +301,7 @@
     <p class="price-note">US shipping $13 via USPS Priority Mail</p>
     <div class="offers"><span>All orders $250+ ship free</span><span>10% off all orders $500+</span></div>
     <div class="price-cta">
-      <a class="btn btn-gold" href="mailto:stoneresearchlabs@gmail.com?subject=Stone%20Research%20Labs%20order%20request">Email to Order</a>
+      <a class="btn btn-gold" href="#order">Order Online</a>
     </div>
   </div>
 </div></section>
@@ -332,31 +341,23 @@
   <p class="lede">No online checkout. Every order is placed directly with our sales person by email.</p>
   <div class="steps">
     <div class="step frame"><div class="num foil">I</div><h3>Choose</h3><p>Select your compounds and sizes from the price list.</p></div>
-    <div class="step frame"><div class="num foil">II</div><h3>Order</h3><p>Email our sales person with the compound, size and quantity you need.</p></div>
+    <div class="step frame"><div class="num foil">II</div><h3>Order</h3><p>Use the order form below to pick your compounds, sizes and quantities, then send your request.</p></div>
     <div class="step frame"><div class="num foil">III</div><h3>Confirm</h3><p>Our sales person replies to confirm your order and total. US orders ship by USPS Priority Mail, discreetly.</p></div>
   </div>
 </div></section>
 
-<section class="contact" id="order"><div class="wrap cgrid">
-  <div>
+<section class="contact" id="order"><div class="wrap">
+  <div class="order-intro">
     <p class="eyebrow">Request an Order</p>
     <h2>Get the peptides you need, <span class="foil">delivered with confidence.</span></h2>
-    <p class="lede">To order, email our sales person directly.</p>
-    <div class="clinks">
-      <a class="clink" href="mailto:stoneresearchlabs@gmail.com?subject=Stone%20Research%20Labs%20order%20request"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><div><b>Email</b><span class="mail">stoneresearchlabs@gmail.com</span></div></a>
-    </div>
+    <p class="lede">Choose your compounds and sizes below, add your shipping details and send your request. Our sales person will email you to confirm your order, total and payment.</p>
+    <div class="offers"><span>US shipping $13 via USPS Priority Mail</span><span>All orders $250+ ship free</span><span>10% off all orders $500+</span></div>
   </div>
-  <form class="frame" id="orderForm">
-    <h3>Order Request</h3>
-    <label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required>
-    <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required>
-    <label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel">
-    <label for="f-items">Compounds, sizes &amp; quantities</label><textarea id="f-items" name="items" required></textarea>
-    <div class="hp" aria-hidden="true"><label for="f-honey">Leave blank</label><input id="f-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
-    <button class="btn btn-gold" type="submit">Send Request</button>
-    <p class="form-status" id="formStatus" role="status" hidden></p>
-    <p class="secure">Your information is secure and never shared.</p>
-  </form>
+  <div class="order-embed frame">
+    <iframe id="ezformz-order" src="https://ezformz.net/f/stone-research-labs" title="Stone Research Labs order form" loading="lazy" allow="clipboard-write"></iframe>
+  </div>
+  <p class="order-alt">Prefer email? Write to <a href="mailto:stoneresearchlabs@gmail.com?subject=Stone%20Research%20Labs%20order%20request">stoneresearchlabs@gmail.com</a> with the compounds, sizes and quantities you need.</p>
+  <p class="secure">Your information is secure and never shared.</p>
 </div></section>
 </main>
 
@@ -374,33 +375,12 @@
       el.insertAdjacentHTML('beforeend', '<svg class="c ' + p + '" aria-hidden="true"><use href="#corner"/></svg>');
     });
   });
-  // Order form: sends the request straight to the sales inbox through FormSubmit (formsubmit.co).
-  // If that service can't be reached, it falls back to opening the visitor's email app.
-  var form = document.getElementById('orderForm'), note = document.getElementById('formStatus');
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var el = form.elements, btn = form.querySelector('button[type=submit]');
-    if (el['_honey'].value) return; // spam bot filled the hidden field
-    var data = {
-      name: el['name'].value, email: el['email'].value, phone: el['phone'].value, request: el['items'].value,
-      _subject: 'New order request from ' + el['name'].value + ' (stone-research-labs.com)',
-      _template: 'table', _replyto: el['email'].value
-    };
-    btn.disabled = true; btn.textContent = 'Sending…'; note.hidden = true;
-    fetch('https://formsubmit.co/ajax/stoneresearchlabs@gmail.com', {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data)
-    }).then(function (r) { return r.json().then(function (j) { if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || 'failed'); }); })
-      .then(function () {
-        form.reset();
-        note.textContent = 'Thank you. Your request was sent to our sales person, who will reply by email to confirm your order and total.';
-        note.className = 'form-status ok'; note.hidden = false; btn.textContent = 'Request Sent';
-      })
-      .catch(function () {
-        var body = 'Name: ' + data.name + '\nEmail: ' + data.email + '\nPhone: ' + data.phone + '\n\nRequest:\n' + data.request;
-        note.innerHTML = 'We couldn\'t send that automatically. Please email your request to <a href="mailto:stoneresearchlabs@gmail.com">stoneresearchlabs@gmail.com</a>.';
-        note.className = 'form-status err'; note.hidden = false; btn.disabled = false; btn.textContent = 'Send Request';
-        location.href = 'mailto:stoneresearchlabs@gmail.com?subject=' + encodeURIComponent('Stone Research Labs order request') + '&body=' + encodeURIComponent(body);
-      });
+  // EZFormz order form: the form posts its height so the frame grows with it (no inner scrollbar).
+  window.addEventListener('message', function (e) {
+    var d = e.data;
+    if (e.origin !== 'https://ezformz.net' || !d || d.source !== 'ezformz' || d.type !== 'ezformz.iframe.resize') return;
+    var f = document.getElementById('ezformz-order');
+    if (f && d.height > 200) f.style.height = Math.ceil(d.height) + 'px';
   });
 </script>
 </body>
