@@ -22,6 +22,8 @@
   body { margin: 0; font-family: "Nunito", system-ui, sans-serif; color: var(--ink); line-height: 1.65; font-size: 17px;
     background-color: var(--paper);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .33 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  /* page-wide watercolor sky, like her flyer (bg.jpg painted by make_bg.py) */
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: #CFE4F2 url("bg.jpg") center top / cover no-repeat; }
   h1, h2, h3 { font-family: "Nunito", sans-serif; font-weight: 900; line-height: 1.12; margin: 0 0 .45em; color: var(--ink); letter-spacing: -.01em; }
   h2 em, h1 em { font-family: "Lobster", cursive; font-style: normal; font-weight: 400; color: var(--navy); letter-spacing: 0; }
   a { color: inherit; }
@@ -46,7 +48,7 @@
 
   /* hero: watercolor sky like her poster */
   .hero { position: relative; overflow: hidden; padding: 34px 0 0; text-align: center;
-    background: radial-gradient(60% 50% at 18% 18%, rgba(255,255,255,.85), transparent 70%), radial-gradient(50% 40% at 85% 12%, rgba(255,255,255,.8), transparent 70%), linear-gradient(180deg, #BFDDF1 0%, #DCEDF7 46%, #F6EEDD 82%, var(--paper) 100%); }
+    background: radial-gradient(48% 42% at 50% 46%, rgba(255,252,244,.62), transparent 78%); }
   .hero .sky { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
   .hero .wrap { position: relative; }
   .lockup { width: min(640px, 100%); height: auto; display: block; margin: 0 auto; }
@@ -83,7 +85,7 @@
   .age p { margin: 0; color: var(--muted); font-size: 15.5px; }
 
   /* offerings */
-  .offer { background: linear-gradient(180deg, var(--sky2), #F3EEE0); }
+  .offer { background: linear-gradient(180deg, rgba(255,253,247,.25), rgba(255,250,240,.6)); }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card { background: var(--white); border-radius: 18px; padding: 24px; display: flex; gap: 16px; align-items: flex-start; border: 1.5px solid var(--line); }
   .card .ic { flex: none; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: var(--c); }
@@ -107,7 +109,7 @@
   .license .lnote { margin: 18px 0 0; font-size: 13.5px; color: var(--muted); }
 
   /* steps: stitched line */
-  .day { background: linear-gradient(180deg, var(--paper), var(--paper2)); }
+  .day { background: linear-gradient(180deg, rgba(255,250,240,.6), rgba(251,240,220,.5)); }
   .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; }
   .timeline::before { content: ""; position: absolute; left: 8%; right: 8%; top: 34px; border-top: 3px dashed #C9A97A; }
   .step { text-align: center; position: relative; }
@@ -129,7 +131,7 @@
   .chips span { background: var(--sky2); border: 1.5px solid #CFE2F0; border-radius: 999px; padding: 5px 14px; font-weight: 800; font-size: 14px; color: var(--navy); }
 
   /* about: cozy, warm */
-  .about { background: linear-gradient(180deg, #F7DCCF, #F3E6D2); }
+  .about { background: linear-gradient(180deg, rgba(247,220,207,.78), rgba(243,230,210,.72)); }
   .about .grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 48px; align-items: center; }
   .about p { color: var(--ink2); font-size: 18px; }
   .about .sig { font-family: "Lobster", cursive; font-size: 32px; color: var(--navy); margin-top: 6px; }
