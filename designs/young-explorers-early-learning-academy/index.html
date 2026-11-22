@@ -93,7 +93,7 @@
   .hero-art { --bleed: 0px; --bus: 0.94; }
   .bus-wrap { position: relative; z-index: 1; width: calc((100% + var(--bleed)) * var(--bus)); margin-left: auto; margin-right: calc(-1 * var(--bleed)); animation: hover 5s ease-in-out infinite; }
   .hero-art .bus { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 24px rgba(0,0,0,.45));
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 9%, #000 94%, transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 9%, #000 94%, transparent 100%); }
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 9%); mask-image: linear-gradient(to right, transparent 0, #000 9%); }
   .hero-art svg.smoke { position: absolute; left: -2%; bottom: -3%; width: 50%; height: 14%; margin: 0; z-index: 2; filter: drop-shadow(0 0 12px rgba(199,205,235,.5)); }
   @keyframes hover { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(0.5deg); } }
   @media (prefers-reduced-motion: reduce) { .bus-wrap { animation: none; } }
@@ -328,12 +328,12 @@
             <path d="M-7 40c0 18 7 30 7 30s7-12 7-30z" fill="url(#flame)" transform="rotate(180 0 55) translate(0 -30)"/>
           </g>
           <!-- astronaut (2026-11-22): Johnathon's own reference picture, cut out of its space background (astronaut.webp, 565x590) -->
-          <image href="astronaut.webp" x="150" y="28" width="158" height="165" preserveAspectRatio="xMidYMid meet"/>
+          <image href="astronaut.webp" x="150" y="24" width="158" height="192" preserveAspectRatio="xMidYMid meet"/>
           <!-- sparkles -->
           <g fill="#FFE9A8"><path d="M470 200l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M40 230l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
         </svg>
         <div class="bus-wrap">
-          <img class="bus" src="blast-off-bus.webp" width="960" height="673" alt="The Young Explorers Early Learning Academy school bus blasting off, with kids waving from the windows">
+          <img class="bus" src="blast-off-bus.webp" width="995" height="673" alt="The Young Explorers Early Learning Academy school bus blasting off, with kids waving from the windows">
           <svg class="smoke" viewBox="0 0 500 90" preserveAspectRatio="none" aria-hidden="true">
             <defs><radialGradient id="puff" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#E4E7F7"/><stop offset="1" stop-color="#C7CDEB"/></radialGradient></defs>
             <g fill="url(#puff)">
