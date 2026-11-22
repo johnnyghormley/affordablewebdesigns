@@ -22,9 +22,11 @@
   body { margin: 0; font-family: "Nunito", system-ui, sans-serif; color: var(--ink); line-height: 1.65; font-size: 17px;
     background-color: var(--paper);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .33 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-  /* page-wide background: her own flyer (2026-11-22), with a soft cream veil so text stays readable */
-  body::before { content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none; background: #CFE4F2 url("flyer-bg.webp") center bottom / cover no-repeat; }
-  body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: rgba(255,250,242,.42); }
+  /* page-wide background: her own flyer (2026-11-22). Sharp copy sized to the screen height so Grace and all the kids show;
+     a blurred copy fills the sides on wide screens; a light cream veil keeps text readable */
+  body::before { content: ""; position: fixed; inset: -40px; z-index: -2; pointer-events: none; background: #E9DCC8 url("flyer-bg.webp") center / cover no-repeat; filter: blur(22px) saturate(.9); }
+  body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(rgba(255,250,242,.42), rgba(255,250,242,.42)), url("flyer-bg.webp") center bottom / auto 118% no-repeat; }
   h1, h2, h3 { font-family: "Nunito", sans-serif; font-weight: 900; line-height: 1.12; margin: 0 0 .45em; color: var(--ink); letter-spacing: -.01em; }
   h2 em, h1 em { font-family: "Lobster", cursive; font-style: normal; font-weight: 400; color: var(--navy); letter-spacing: 0; }
   a { color: inherit; }
